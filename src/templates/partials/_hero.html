@@ -1,5 +1,61 @@
 <!-- begin hero -->
-<section class="hero">
-  <h1>hello from hero</h1>
+<section class="hero js-lazy" data-background-image="./img/hero/{{ hero.bg }}">
+  <div class="hero__top">
+    <div class="hero__logo">
+      <a href="/" class="logo">
+        <img class="js-lazy" alt="" src="" data-src="./img/Logo.png"/>
+      </a>
+    </div>
+
+    <div class="container">
+      <div class="hero__phone">
+        <a href="tel:+15515531215">+1 551-553-1215</a>
+      </div>
+    </div>
+  </div>
+
+  {% if hero.showreel %}
+  <div class="hero__show-btn">
+    <!-- begin show-btn -->
+    <div class="show-btn">
+      <button class="show-btn__btn">
+        <span class="show-btn__icon">
+          <img class="js-lazy" alt="" src="" data-src="./img/video.png"/>
+        </span>
+        <span class="show-btn__title">Click to watch our showreel</span>
+      </button>
+    </div>
+    <!-- end show-btn -->
+  </div>
+  {% endif %}
+
+  <div class="hero__block">
+    <!-- begin hero-block -->
+    <div class="hero-block">
+      {% if hero.title %}
+        <div class="hero-block__title">
+          <h1 class="title title--h1">{{ hero.title | safe }}</h1>
+        </div>
+      {% endif %}
+
+      {% if hero.subttl %}
+      <div class="hero-block__subttl">{{ hero.subttl | safe }}</div>
+      {% endif %}
+
+      {% if hero.scroll %}
+      <div class="hero-block__scroll">
+        <!-- begin scroll-down -->
+        <a href="#" class="scroll-down">
+          <span class="scroll-down__title">discover more</span>
+          <span class="scroll-down__arrow"><span></span></span>
+        </a>
+        <!-- end scroll-down -->
+      </div>
+      {% endif %}
+    </div>
+    <!-- end hero-block -->
+  </div>
+
+  
 </section>
 <!-- end hero -->

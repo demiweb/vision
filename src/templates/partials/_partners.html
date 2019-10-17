@@ -1,0 +1,36 @@
+<!-- begin slider -->
+<div class="slider__wrap slider--partners__wrap">
+  <div class="slider slider--partners js-slider" data-slider="partners">
+    {% for i in range(0, 8) %}
+    <!-- begin slide -->
+    <div class="slide">
+      <div class="partner">
+        <div class="partner__cover">
+          <img class="js-lazy" alt="" src="" data-src="./img/partners/ted.png"/>
+        </div>
+
+        <div class="partner__content">
+          <div class="partner__title">
+            <h5 class="title title--h5">Ultimate Fighting Championship</h5>
+          </div>
+
+          <div class="partner__text text--xs text--gray-dark">is an American mixed martial arts 
+            promotion  company based  in Las Vegas, 
+            Nevada, that is owned and operated by
+            parent company William Morris Endeavor.
+          </div>
+
+          <div class="partner__img">
+            <img class="js-lazy" alt="" src="" data-src="./img/partners/ufc-color.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end slide -->
+    {% endfor %}
+  </div>
+
+  <button class="slider__prev prev js-slider-prev"></button>
+  <button class="slider__next next js-slider-next"></button>
+</div>
+<!-- end slider -->

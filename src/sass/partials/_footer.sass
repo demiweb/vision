@@ -1,0 +1,54 @@
+.footer
+  background-color: $gray-lightest
+  &__inner
+    padding-top: 45px
+    +lg
+      padding-top: 30px
+  &__top
+    +flex()
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__logo
+    margin-bottom: 10px
+  &__text
+    font-size: 13px
+    color: $gray-dark
+  &__middle
+    width: percentage(6/12)
+    text-align: center
+  &__nav
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__left
+    width: percentage(3/12)
+  &__contacts
+    width: percentage(3/12)
+    text-align: right
+  &__bottom
+    padding-bottom: 20px
+    text-align: center
+    position: relative
+    +md
+      padding-bottom: 10px
+  &__auth
+    +flex(flex-start, center)
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: 1
+    a
+      text-decoration: underline
+      color: $accent
+  &__auth-icon
+    +flex(center, center)
+    width: 35px
+    height: 35px
+    background-color: $black
+    color: $white
+    margin-right: 10px
+    .icon
+      font-size: 20px
+
+

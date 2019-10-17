@@ -3,7 +3,7 @@ body
   line-height: 1.4
   font-size: $fz
   min-width: 320px
-  font-family: 'proximanova', Arial, sans-serif
+  font-family: 'Gilroy', Arial, sans-serif
   color: $c-text
   +no-scroll
   +sm
@@ -17,4 +17,115 @@ body
 .lazy
   &.is-loaded:not(.no-animation)
     animation: fadeIn 1s
+
+.container
+  max-width: 1440px
+  padding-left: 15px
+  padding-right: 15px
+  margin-left: auto
+  margin-right: auto
+
+.logo
+  display: inline-block
+  font-size: 0
+
+.out
+  +md
+    padding-top: 50px
     
+
+.scroll-down
+  text-transform: uppercase
+  font-size: $fz-sm
+  font-weight: 600
+  text-align: center
+  display: inline-block
+  +tr(color .3s)
+  +hover
+    // color: $accent
+  &__title
+    display: block
+  &__arrow
+    position: relative
+    display: inline-block
+    width: 18px
+    height: 30px
+    &::before,
+    &::after
+      content: ''
+    &::before,
+    &::after,
+    span
+      position: absolute
+      display: block
+      +icon-arrow(12, 12, 1, currentColor, -45)
+      animation: scrollDown 1s infinite
+    &::before
+      top: 0
+    span
+      top: 50%
+      transform: translate(0, -50%) rotate(-45deg)
+      animation-delay: .1s
+    &::after
+      bottom: 0
+      animation-delay: .2s
+
+.link
+  display: inline-block
+  position: relative
+  text-transform: uppercase
+  color: $accent
+  font-weight: 600
+  font-size: $fz-sm
+  padding-right: 45px
+  +tr(color .3s)
+  +before
+    width: 35px
+    display: inline-block
+    border-top: 1px solid currentColor
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    right: 0
+  +after
+    +icon-arrow(0.6, 0.6, 0.06, currentColor, 225, em)
+    display: inline-block
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(0, -50%) rotate(225deg)
+  &--inherit
+    color: inherit
+
+.text-label
+  display: inline-block
+  font-size: em(15)
+  color: $gray-dark
+  border-color: currentColor
+  border-bottom: 1px solid
+  border-right: 1px solid
+  position: relative
+  text-transform: uppercase
+  padding-top: .5em
+  padding-bottom: .3em
+  padding-right: .3em
+  +before
+    width: 50%
+    position: absolute
+    top: 0
+    right: 0
+    border-top: 1px solid currentColor
+  &--inherit
+    color: inherit
+
+.text-block
+  &__label, &__title
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__text
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px

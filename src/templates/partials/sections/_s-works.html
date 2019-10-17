@@ -1,0 +1,55 @@
+{%set
+works = [
+  {
+    upttl: 'New media',
+    img: '01.jpg',
+    title: 'Priamy Channel'
+  },
+  {
+    upttl: 'TV',
+    img: '02.jpg',
+    title: 'NASH Channel'
+  },
+  {
+    upttl: 'Sports',
+    img: '03.jpg',
+    title: 'Halyk Arena'
+  },
+  {
+    upttl: 'Sports',
+    img: '04.jpg',
+    title: 'Boris Aleksandrov Sports 
+Palace in Ust-Kamenogorsk'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-lg pb-xl">
+  <div class="container">
+    <div class="section__title-block">
+      <div class="text-block">
+        <div class="text-block__label">
+          {{ mixins.label('REFERENCES') }}
+        </div>
+
+        <div class="text-block__title">
+          <h2 class="title title--h2"><small>We’ve got</small> the expertise you need</h2>
+        </div>
+
+        <div class="text-block__text text--gray-dark">Take a look at some of our numerous projects</div>
+      </div>
+    </div>    
+  </div>
+
+  {% include "partials/_works-links.html" %}
+
+  <div class="section__btn">
+    {{ mixins.btn(
+      title = 'Browse all projects',
+      mod = '',
+      combine = true
+    ) }}
+  </div>
+</section>
+<!-- end section -->

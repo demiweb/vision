@@ -1,0 +1,51 @@
+{%set
+block = {
+  mod: 'section-half--center'
+}
+%}
+{%set
+section = {
+  mod: 's-contacts'
+}
+%}
+
+{% extends "layouts/_section-fixed-right.html" %}
+
+{% block left %}
+<!-- begin text-block -->
+<div class="text-block s-contacts__content">
+  <div class="text-block__label">
+    {{ mixins.label('Contacts', 'text-label--inherit') }}
+  </div>
+
+  <div class="text-block__title">
+    <h2 class="title title--h2"><small>Contact</small>
+Vision House</h2>
+  </div>
+
+  <div class="text-block__text">Vision House International s.r.o. <br>  
+Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї</div>
+
+  <div class="text-block__text">
+    <p><strong><a href="tel:+15515531215">+1 551-553-1215</a></strong></p>
+    <p><strong><a href="mailto:info@cimmaintenance.com">info@cimmaintenance.com</a></strong></p>
+  </div>
+
+  <div class="text-block__btn">
+    {{ mixins.btn(
+      title = 'contact us',
+      mod = 'btn--inherit',
+      combine = true
+    ) }}
+  </div>
+</div>
+<!-- end text-block -->
+{% endblock %}
+
+{% block right %}
+<!-- begin map -->
+<div class="map">
+  <iframe class="js-lazy" src="" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.9194171957574!2d17.114780815834898!3d48.15035875824919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c894f67366bf3%3A0x2f40e463a83ac498!2zTWlja2lld2ljem92YSAyMjU1LzE2LCA4MTEgMDcgQnJhdGlzbGF2YSwg0KHQu9C-0LLQsNC60LjRjw!5e0!3m2!1sru!2sua!4v1571320900669!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+<!-- end map -->
+{% endblock %}

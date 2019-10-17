@@ -1,0 +1,21 @@
+<!-- begin works-links -->
+<div class="works-links">
+  {% for i in works.list or works %}
+  <div class="works-links__item">
+    <!-- begin work-link -->
+    <a href="#" class="work-link js-lazy" data-background-image="./img/works/{{ i.img }}">
+      <span class="work-link__content">
+        <span class="work-link__upttl">{{ i.upttl | safe }}</span>
+        <span class="work-link__title">
+          <span class="title title--ttu title--h2">{{ i.title | safe }}</span>
+        </span>
+        <span class="work-link__link">
+          <span class="link link--no-hover link--inherit">BROWSE project</span>
+        </span>
+      </span>
+    </a>
+    <!-- end work-link -->
+  </div>
+  {% endfor %}
+</div>
+<!-- end works-links -->

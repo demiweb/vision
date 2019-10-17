@@ -1,0 +1,48 @@
+.partner
+  $this: &
+  position: relative
+  padding-top: 60%
+  +hover
+    #{$this}__content
+      visibility: visible
+      opacity: 1
+      transform: translate(0, -50%) scaleY(1)
+    #{$this}__cover
+      visibility: hidden
+      opacity: 0
+  &__cover
+    border: 1px solid  $gray
+    // padding-top: 25%
+    // padding-bottom: 25%
+    // text-align: center
+    +tr(visibilty .3s, opacity .3s)
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    +flex(center, center)
+  &__content
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate(0, -50%) scaleY(.6)
+    right: 0
+    padding: 35px
+    border: 1px solid  $accent
+    max-height: calc(100% + 160px)
+    visibility: hidden
+    background-color: $white
+    opacity: 0
+    +tr(visibility .3s, opacity .3s, transform .3s)
+  &__title
+    margin-bottom: 10px
+  &__text
+    margin-bottom: 20px
+    max-height: 6.5em
+    overflow: hidden
+    +md
+      margin-bottom: 10px
+  &__img
+    text-align: right
+    

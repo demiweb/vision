@@ -1,0 +1,67 @@
+{%set
+section = {
+  mod: 's-solutions pt-mdl pb-lg'
+}
+%}
+
+{%set
+links = [
+  { icon: 'tv', title: 'TV' },
+  { icon: 'trophy', title: 'Sports' },
+  { icon: 'share', title: 'New media' }
+]
+%}
+
+{% extends "layouts/_section-fixed-left.html" %}
+
+{% block left %}
+<div class="s-solutions__img js-lazy" data-background-image="./img/home/01.jpg"></div>
+<div class="s-solutions__link">
+  <a href="#" class="link">bROWSE ALL SOLUTIONS</a>
+</div>
+{% endblock %}
+
+{% block right %}
+<div class="s-solutions__right">
+  <div class="s-solutions__text-block">
+    <!-- begin text-block -->
+    <div class="text-block">
+      <div class="text-block__label">
+        {{ mixins.label('SOLUTIONS') }}
+      </div>
+
+      <div class="text-block__title">
+        <h2 class="title title--h2">Sports</h2>
+      </div>
+
+      <div class="text-block__text">Big screens, video cubes, lighting, sound, control rooms, 
+cameras, replays and cabling for arenas and stadiums. 
+Infrastructures for esports.</div>
+
+      <div class="text-block__btn">
+        {{ mixins.btn(
+          title = 'lEARN MORE',
+          mod = '',
+          combine = true
+        ) }}
+      </div>
+    </div>
+    <!-- end text-block -->
+  </div>
+
+  <!-- begin solutions-links -->
+  <div class="solutions-links">
+    {% for i in links %}
+    <!-- begin solutions-link -->
+    <a href="#" class="solutions-link">
+      <span class="solutions-link__content">
+        <span class="solutions-link__icon">{{ mixins.icon(i.icon) }}</span>
+        <span class="solutions-link__title">{{ i.title | safe }}</span>
+      </span>
+    </a>
+    <!-- end solutions-link -->
+    {% endfor %}
+  </div>
+  <!-- end solutions-links -->
+</div>
+{% endblock %}

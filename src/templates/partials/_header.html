@@ -1,5 +1,15 @@
 <!-- begin header -->
 <header class="header">
-  hello from header
+  <div class="header__burger">
+    <button class="burger js-burger" data-menu="main_menu">
+      {{ mixins.icon('menu') }}
+    </button>
+  </div>
+  <div class="header__btn">
+    <button class="header-btn js-burger" data-menu="contacts">
+      <span class="header-btn__icon">{{ mixins.icon('chat') }}</span>
+      <span class="header-btn__title">Contact us</span>
+    </button>
+  </div>
 </header>
 <!-- end header -->

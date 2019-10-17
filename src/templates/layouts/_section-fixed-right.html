@@ -1,0 +1,18 @@
+<!-- begin section -->
+<section class="section{% if section.mod %} {{ section.mod }}{% endif %}">
+  <div class="section-half-full section-half-full--right{% if block.mod %} {{ block.mod }}{% endif %}">
+    <div class="section-half-full__left">
+      <div class="container">
+        <div class="section-half-full__left-in">
+          {% block left %}{% endblock %}
+        </div>
+      </div> 
+    </div>
+
+    <div class="section-half-full__right">
+     {% block right %}{% endblock %}
+   </div>
+ </div>
+</section>
+<!-- end section -->
+

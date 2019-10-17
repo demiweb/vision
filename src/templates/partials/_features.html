@@ -1,0 +1,21 @@
+<!-- begin features -->
+<div class="features">
+  {% for i in features.list or features %}
+  <div class="features__item">
+    <!-- begin feature -->
+    <div class="feature">
+      <div class="feature__icon">
+        {{ mixins.icon(i.icon) }}
+      </div>
+
+      <div class="feature__title">
+        <h5 class="title title--h5">{{ i.title | safe }}</h5>
+      </div>
+
+      <div class="feature__text">{{ i.text | safe }}</div>
+    </div>
+    <!-- end feature -->
+  </div>
+  {% endfor %}
+</div>
+<!-- end features -->

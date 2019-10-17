@@ -1,0 +1,34 @@
+.works-links
+  +flex(flex-start, normlal, row, wrap)
+  &__item
+    width: 50%
+
+.work-link
+  +cover
+  position: relative
+  display: block
+  padding: $padding-page-left
+  height: 100%
+  padding-top: 30%
+  color: $white
+  +lg
+    padding: $padding-page-left-lg
+  +md
+    padding: $padding-page-left-md
+  +before
+    +coverdiv
+    background-color: rgba($black, .4)
+  &__content
+    display: block
+    position: relative
+    z-index: 1
+  &__upttl
+    font-size: em(15)
+    display: block
+    color: $accent
+  &__title
+    margin-bottom: 25px
+    display: block
+    +md
+      margin-bottom: 10px
+    

@@ -1,0 +1,36 @@
+$control-btn-size: 70px
+
+.prev, .next
+  +inline-flex(center, center)
+  width: $control-btn-size
+  height: $control-btn-size
+  background-color: $accent
+  color: $white
+  +before
+    +icon-arrow(10, 10, 1, currentColor, 45)
+    display: block
+    margin-left: .3em
+
+.next
+  transform: scaleX(-1)
+
+.slider
+  &__wrap
+    position: relative
+    .slide
+      font-size: $fz
+  &--partners
+    &__wrap
+      .tns-ovh
+        padding-top: 80px
+        padding-bottom: 80px
+  &__next, &__prev
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    z-index: 1
+  &__next
+    right: -$control-btn-size - 15px
+    transform: translate(0, -50%) scaleX(-1)
+  &__prev
+    left: -$control-btn-size - 15px

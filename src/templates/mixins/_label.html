@@ -1,0 +1,7 @@
+{% macro label(title, mod) %}
+<!-- begin text-label -->
+<div class="text-label{% if mod %} {{ mod }}{% endif %}">
+  <div class="text-label__title">{{ title | safe }}</div>
+</div>
+<!-- end text-label -->
+{% endmacro %}

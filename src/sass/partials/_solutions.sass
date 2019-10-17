@@ -1,0 +1,24 @@
+.solutions-links
+  +flex
+
+.solutions-link
+  display: block
+  padding: 30px
+  padding-top: 40%
+  border: 1px solid  $gray
+  position: relative
+  width: 33.33333%
+  &::before
+    content: '+'
+    color: $gray
+    top: 20px
+    right: 30px
+    position: absolute
+    z-index: 1
+    font-size: 1.5em
+    line-height: 1
+  &__icon
+    display: block
+    margin-bottom: 20px
+    .icon
+      font-size: 50px

@@ -1,0 +1,119 @@
+.section
+  position: relative
+  &__title
+    text-align: center
+    margin-bottom: 100px
+    +xl
+      margin-bottom: 80px
+    +lg
+      margin-bottom: 60px
+    +md
+      margin-bottom: 40px
+    +sm
+      margin-bottom: 20px
+  &__title-block
+    margin-bottom: 50px
+    text-align: center
+    +xl
+      margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__btn
+    padding-top: 30px
+    text-align: center
+    +md
+      padding-top: 15px
+
+  &--gray-lightest
+    background-color: $gray-lightest
+
+
+.section-half-full
+  $this: &
+  position: relative
+  &__left
+    position: absolute
+    width: 50%
+    top: 0
+    bottom: 0
+    left: 0
+  &__right-in
+    margin-left: 50%
+    padding-left: 15px
+  &__left-in
+    margin-right: 50%
+    padding-right: 15px
+  &--right
+    #{$this}__left
+      position: relative
+      // width: 50%
+      width: auto
+      left: auto
+      bottom: auto
+      top: auto
+    #{$this}__right
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      width: 50%
+
+.s-solutions
+  &__img
+    +cover
+    padding-top: 60%
+    margin-bottom: 30px
+  &__link
+    text-align: center
+  &__right
+    margin-left: -15px
+  &__text-block
+    padding-left: percentage(1/6)
+    margin-bottom: 85px
+
+.s-about
+  color: $white
+  overflow: hidden
+  padding-bottom: 90px
+  &__inner
+    +flex(flex-start, normal, row, wrap)
+  &__left
+    width: 50%
+  &__right
+    width: 50%
+  &__img
+    height: 100%
+    margin-right: -80px
+    margin-top: 90px
+    +cover
+  &__content
+    background-color: $accent
+    position: relative
+    padding-top: 75px
+    padding-bottom: 75px
+    padding-right: percentage(1/6)
+    +before
+      position: absolute
+      top: 0
+      bottom: 0
+      background-color: $accent
+      width: 50vw
+      right: 100%
+
+.s-contacts
+  overflow: hidden
+  &__content
+    padding-top: 20%
+    padding-bottom: 20%
+    background-color: $accent
+    color: $white
+    position: relative
+    +before
+      background-color: $accent
+      top: 0
+      bottom: 0
+      right: 100%
+      width: 50vw
+      position: absolute
