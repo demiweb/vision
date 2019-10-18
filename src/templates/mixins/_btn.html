@@ -4,16 +4,19 @@
     <a href="{{ href }}" class="btn{% if mod %} {{ mod }}{% endif %}" {% for attr, attrValue in attributes %} {{ attr }}="{{ attrValue }}" {% endfor %}>
       <span class="btn__title">{{ title | safe }}</span>
       <span class="btn__icon">{{ icon | safe }}</span>
+      <span class="btn__cover"></span>
     </a>
     {% elseif isInline %}
     <span class="btn{% if mod %} {{ mod }}{% endif %}" {% for attr, attrValue in attributes %} {{ attr }}="{{ attrValue }}" {% endfor %}>
       <span class="btn__title">{{ title | safe }}</span>
       <span class="btn__icon">{{ icon | safe }}</span>
+      <span class="btn__cover"></span>
     </span>
     {% else %}
     <button class="btn{% if mod %} {{ mod }}{% endif %}" {% for attr, attrValue in attributes %} {{ attr }}="{{ attrValue }}" {% endfor %}>
       <span class="btn__title">{{ title | safe }}</span>
       <span class="btn__icon">{{ icon | safe }}</span>
+      <span class="btn__cover"></span>
     </button>
     {% endif %}
 

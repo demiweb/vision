@@ -9,6 +9,9 @@
     margin-bottom: 20px
     +md
       margin-bottom: 10px
+    +sm
+      display: block
+      text-align: center
   &__logo
     margin-bottom: 10px
   &__text
@@ -17,15 +20,25 @@
   &__middle
     width: percentage(6/12)
     text-align: center
+    +sm
+      width: auto
+      margin-bottom: 10px
   &__nav
     margin-bottom: 20px
     +md
       margin-bottom: 10px
   &__left
     width: percentage(3/12)
+    +sm
+      width: auto
+      margin-bottom: 10px
   &__contacts
     width: percentage(3/12)
     text-align: right
+    +sm
+      width: auto
+      text-align: center
+      margin-bottom: 10px
   &__bottom
     padding-bottom: 20px
     text-align: center
@@ -38,6 +51,9 @@
     bottom: 0
     right: 0
     z-index: 1
+    +lg
+      position: static
+      justify-content: center
     a
       text-decoration: underline
       color: $accent
@@ -50,5 +66,8 @@
     margin-right: 10px
     .icon
       font-size: 20px
+  &__copy
+    +lg
+      margin-bottom: 10px
 
 

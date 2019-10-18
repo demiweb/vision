@@ -1,0 +1,78 @@
+{%set
+fields = [
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'David Branch',
+    label: 'Name*',
+    fieldClass: ''
+  },
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'TBC',
+    label: 'Company*',
+    fieldClass: ''
+  },
+  {
+    name: 'input',
+    type: 'email',
+    placeholder: 'David@gm|',
+    label: 'Email*',
+    fieldClass: ''
+  },
+  {
+    name: 'input',
+    type: 'tel',
+    placeholder: '+1 333 - 333 - 333',
+    label: 'Phone number*',
+    fieldClass: ''
+  },
+  {
+    full: true,
+    name: 'textarea',
+    type: '',
+    placeholder: 'Message',
+    label: 'Message*',
+    fieldClass: 'js-textarea'
+  }
+]
+%}
+
+<!-- begin popup-form -->
+<div class="popup-form">
+  <!-- begin form -->
+  <div class="form">
+    <form>
+      <div class="form__title">
+        <h2 class="title title--h2"><small class="is-inline">Have a</small> question?</h2>
+      </div>
+      <div class="form__row">
+        {% for i in fields %}
+        <div class="{% if i.full %}form__col form__col-full{% else %}form__col{% endif %}">
+          {{ mixins.input(
+            name = i.name,
+            mod = '',
+            type = i.type,
+            placeholder = i.placeholder,
+            value = '',
+            fieldClass = i.fieldClass,
+            label = { first: i.label }
+          ) }}
+        </div>
+        {% endfor %}
+
+        <div class="form__col form__col-full form__btn">
+          {{ mixins.btn(
+            title = 'Send',
+            mod = 'btn--inherit',
+            combine = true,
+            href = false
+          ) }}
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- end form -->
+</div>
+<!-- end popup-form -->

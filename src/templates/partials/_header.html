@@ -1,15 +1,29 @@
 <!-- begin header -->
-<header class="header">
+<header class="header js-header">
   <div class="header__burger">
-    <button class="burger js-burger" data-menu="main_menu">
+    <button class="burger js-burger" data-menu-target="main_menu">
       {{ mixins.icon('menu') }}
+      {{ mixins.icon('left-arrow-chevron') }}
     </button>
   </div>
-  <div class="header__btn">
-    <button class="header-btn js-burger" data-menu="contacts">
-      <span class="header-btn__icon">{{ mixins.icon('chat') }}</span>
-      <span class="header-btn__title">Contact us</span>
-    </button>
+  <div class="header__inner">
+    
+
+    <div class="header__menu js-menu" data-menu="main_menu">
+      {% include "partials/_menu.html" %}
+    </div>
+
+    <div class="header__menu header__form js-menu" data-menu="form_menu">
+      {% include "partials/_popup-form.html" %}
+    </div>
+
+    <div class="header__btn">
+      <button class="header-btn js-burger" data-menu-target="form_menu">
+        <span class="header-btn__icon">{{ mixins.icon('chat') }}</span>
+        <span class="header-btn__title">Contact us</span>
+      </button>
+    </div>
   </div>
+  
 </header>
 <!-- end header -->

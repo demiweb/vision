@@ -2,12 +2,35 @@
   +flex
 
 .solutions-link
+  $this: &
   display: block
   padding: 30px
   padding-top: 40%
   border: 1px solid  $gray
+  border-right-color: transparent
   position: relative
   width: 33.33333%
+  +tr(color .3s)
+  +hover
+    color: $white
+    #{$this}__bg
+      visibility: visible
+      opacity: 1
+      transform: scaleY(1.1)
+    &::before
+      top: calc(100% - 53px)
+      +lg
+        top: calc(100% - 43px)
+      +sm
+        top: calc(100% - 33px)
+  +lg
+    padding: 20px
+    padding-top: 40%
+  +sm
+    padding: 10px
+    padding-top: 40%
+  &:last-child
+    border-right: 1px solid $gray
   &::before
     content: '+'
     color: $gray
@@ -17,8 +40,34 @@
     z-index: 1
     font-size: 1.5em
     line-height: 1
+    +tr(top .3s, bottom .3s)
+    +lg
+      right: 10px
+      top: 10px
+  &__content
+    position: relative
+    z-index: 1
   &__icon
     display: block
     margin-bottom: 20px
+    position: relative
+    z-index: 1
+    +sm
+      margin-bottom: 10px
     .icon
       font-size: 50px
+      +lg
+        font-size: 40px
+      +sm
+        font-size: 30px
+  &__bg
+    +coverdiv
+    z-index: 0
+    +cover
+    +tr(transform .3s, visibility .3s, opacity .3s)
+    visibility: hidden
+    opacity: 0
+    +before
+      +coverdiv
+      background-color: rgba($accent, .8)
+

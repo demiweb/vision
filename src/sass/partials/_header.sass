@@ -1,44 +1,177 @@
 .header
+  $this: &
   position: fixed
   z-index: 10
   top: 0
   right: 0
-  bottom: 0
+  height: 100%
   width: $header-width
-  background-color: $white
+  background-color: transparent
+  +ready
+    +tr(height .5s cubic-bezier(.1,.89,.54,1.18))
   +md
     left: 0
     bottom: auto
     width: auto
-    height: 50px
+    height: $header-height-md
+    background-color: $white
     +flex(flex-end)
+
+  &.is-small
+    height: $header-width * 2
+    .header-btn
+      padding-bottom: 0
+      justify-content: center
+      &__title        
+        font-size: 0
+    #{$this}__btn
+      transition-delay: .5s
+      +before
+        transition-delay: .5s
+    +hover
+      height: 100%
+      .header-btn
+        justify-content: flex-end
+        padding-bottom: 160px
+        +md
+          padding-bottom: 100px
+        &__title
+          font-size: inherit      
+
+
   &__burger
     height: $header-width
-    // height: var(--header-width)
+    box-shadow: 0px 0px 10.8px 1.2px rgba(0, 0, 1, 0.07)
     +flex(center, center)
+    position: relative
+    z-index: 2
+    background-color: $white
     +md
       height: auto
-  &__btn
+      width: 100%
+      padding-left: 15px
+      padding-right: 15px
+      justify-content: flex-end
+  &__inner
     height: calc(100% - #{$header-width})
-    // height: calc(100% - var(--header-width))
-    display: block
     +md
       height: auto
+
+  &__btn
+    height: 100%
+    position: relative
+    z-index: 2
+    background-color: $gray-lighten
+    overflow: hidden
+    +tr(color .3s)
+    .has-open-menu &
+      color: $white
+      +before
+        transform: translate(0, 0)
+    +hover
+      color: $white
+      +before
+        transform: translate(0, 0)
+    +before
+      +coverdiv
+      background-color: $accent
+      transform: translate(0, 100%)
+      +ready
+        +tr(transform .5s)
+
+    +md
+      background-color: transparent
+      position: static
+  &__menu
+    position: absolute
+    right: 100%
+    overflow: auto
+    top: 0
+    bottom: 0
+    width: calc(100vw - #{$header-width})
+    z-index: 1
+    background-color: $black
+    color: $white
+    transform: translate(calc(100% + #{$header-width}), 0)
+    padding-top: 15px
+    padding-bottom: 15px
+    +ready
+      +tr(transform .5s)
+    .container
+      position: relative
+      left: $header-width / 2
+      height: 100%
+      +r(1730)
+        left: auto
+    &.is-active
+      transform: translate(0, 0)
+    +md
+      width: 100%
+      left: 0
+      bottom: auto
+      top: 100%
+      height: calc(100vh - #{$header-height-md})
+      height: calc((var(--vh, 1vh) * 100) - #{$header-height-md})
+      transform: translate(0, calc(-100% - #{$header-height-md}))
+      padding-right: 60px
+      padding-top: 80px
+  &__form
+    padding-left: 15px
+    padding-right: 15px
+    overflow-x: hidden
+    +vertical
+    +md
+      padding-right: 15px
+
 
 .burger
   display: block
   color: $black
   width: 40px
   height: 40px
+  position: relative
   .icon
     font-size: 35px
+    +tr(opacity .3s, visibility .3s)
+    +md
+      font-size: 25px
+  .icon-left-arrow-chevron
+    +vcenter
+    visibility: hidden
+    opacity: 0
+  &.is-active, &.has-close-icon
+    .icon-menu
+      visibility: hidden
+      opacity: 0
+    .icon-left-arrow-chevron
+      visibility: visible
+      opacity: 1
 
 .header-btn
   width: 100%
   height: 100%
   +flex(flex-end, center, column)
   padding-bottom: 160px
-  background-color: $gray-lighten
+  +tr(padding .5s)
+  position: relative
+  z-index: 1
+  +md
+    padding-bottom: 100px
+    color: $white
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    top: calc(#{$header-height-md} + 15px)
+    right: 0
+    height: auto
+    width: auto
+    z-index: 2
+  &.is-active
+    pointer-events: none
+  .has-open-menu &:not(.is-active)
+    visibility: visible
+    opacity: 1
+
   &__title
     display: block
     transform: translate(calc(50% + .7em), 0) rotate(90deg)

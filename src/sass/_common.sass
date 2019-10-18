@@ -31,7 +31,7 @@ body
 
 .out
   +md
-    padding-top: 50px
+    padding-top: $header-height-md
     
 
 .scroll-down
@@ -79,6 +79,11 @@ body
   font-size: $fz-sm
   padding-right: 45px
   +tr(color .3s)
+  +hover
+    +before
+      transform: translate(10px, -50%)
+    +after
+      transform: translate(10px, -50%) rotate(225deg) !important
   +before
     width: 35px
     display: inline-block
@@ -87,15 +92,23 @@ body
     top: 50%
     transform: translate(0, -50%)
     right: 0
+    +tr(transform .3s)
   +after
     +icon-arrow(0.6, 0.6, 0.06, currentColor, 225, em)
     display: inline-block
     position: absolute
     top: 50%
     right: 0
-    transform: translate(0, -50%) rotate(225deg)
+    transform: translate(0, -50%) rotate(225deg) !important
+    +tr(transform .3s)
   &--inherit
     color: inherit
+  &--no-hover
+    +hover
+      +before
+        transform: translate(0, -50%)
+      +after
+        transform: translate(0, -50%) rotate(225deg) !important
 
 .text-label
   display: inline-block
@@ -128,4 +141,19 @@ body
     +lg
       margin-bottom: 30px
     +md
+      margin-bottom: 15px
+
+.two-cols
+  +flex(flex-start, normal, row, wrap)
+  margin-left: -15px
+  margin-right: -15px
+  &__col
+    width: 50%
+    padding-left: 15px
+    padding-right: 15px
+    +flex(center, normal, column)
+    margin-bottom: 30px
+    +md
+      width: 100%
+    +sm
       margin-bottom: 15px

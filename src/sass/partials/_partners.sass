@@ -2,7 +2,7 @@
   $this: &
   position: relative
   padding-top: 60%
-  +hover
+  &:hover
     #{$this}__content
       visibility: visible
       opacity: 1
@@ -12,9 +12,6 @@
       opacity: 0
   &__cover
     border: 1px solid  $gray
-    // padding-top: 25%
-    // padding-bottom: 25%
-    // text-align: center
     +tr(visibilty .3s, opacity .3s)
     position: absolute
     top: 0
@@ -24,6 +21,7 @@
     +flex(center, center)
   &__content
     position: absolute
+    min-height: 100%
     left: 0
     top: 50%
     transform: translate(0, -50%) scaleY(.6)
@@ -34,7 +32,14 @@
     visibility: hidden
     background-color: $white
     opacity: 0
+    +flex(center, normal, column)
     +tr(visibility .3s, opacity .3s, transform .3s)
+    +xl
+      padding: 25px
+    +lg
+      padding: 20px
+    +sm
+      padding: 10px
   &__title
     margin-bottom: 10px
   &__text

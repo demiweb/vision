@@ -1,20 +1,28 @@
 <!-- begin features -->
-<div class="features">
+<div class="features{% if features.mod %} {{ features.mod }}{% endif %}">
   {% for i in features.list or features %}
   <div class="features__item">
+    {% if i.icon %}
     <!-- begin feature -->
-    <div class="feature">
+    <div class="feature{% if i.mod %} {{ i.mod }}{% endif %}">
       <div class="feature__icon">
         {{ mixins.icon(i.icon) }}
       </div>
 
       <div class="feature__title">
+        {% if i.title.simple %}
+        {{ i.title.simple | safe }}
+        {% else %}
         <h5 class="title title--h5">{{ i.title | safe }}</h5>
+        {% endif %}        
       </div>
 
+      {% if i.text %}
       <div class="feature__text">{{ i.text | safe }}</div>
+      {% endif %}
     </div>
     <!-- end feature -->
+    {% endif %}
   </div>
   {% endfor %}
 </div>

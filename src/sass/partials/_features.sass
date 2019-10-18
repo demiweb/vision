@@ -1,4 +1,5 @@
 .features
+  $this: &
   +flex(center, normal, row, wrap)
   margin-left: -15px
   margin-right: -15px
@@ -13,6 +14,41 @@
       margin-bottom: 30px
     +md
       margin-bottom: 15px
+      width: 50%
+    +xs
+      width: 100%
+  &--grid
+    margin-left: 0
+    margin-right: 0
+    position: relative
+    justify-content: flex-start
+    +after
+      width: 100%
+      position: absolute
+      height: 1px
+      bottom: 0
+      z-index: 1
+      background-color: $white
+    #{$this}__item
+      border-right: 1px solid  $gray
+      border-bottom: 1px solid  $gray
+      margin-bottom: 0
+      padding-left: 0
+      padding-right: 0
+      padding-top: 30px
+      padding-bottom: 30px
+      &:nth-child(3n -3)
+        border-right: 0
+        +md
+          border-right: 1px solid $gray
+        +xs
+          border-right: 0
+      +md
+        &:nth-child(even)
+          border-right: 0
+      +xs
+        border-right: 0
+
 
 .feature
   &__icon
@@ -27,7 +63,7 @@
     background-repeat: no-repeat
     background-size: auto
     .icon
-      font-size: 50px
+      font-size: em(50)
     // +before
       // +imag
   &__title
@@ -35,3 +71,7 @@
   &__text
     font-size: $fz-xs
     color: $gray-dark
+  &--sm
+    text-align: center
+    padding-left: 10px
+    padding-right: 10px

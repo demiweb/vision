@@ -1,0 +1,20 @@
+---
+title: about
+page: about
+hero: {
+  bg: 'bg-hero-about.jpg',
+  title: '<small>New Gen Systems Integrator</small> for TV, sports and new media',
+  scroll: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-features-sm.html" %}
+  {% include "partials/sections/_s-solutions.html" %}
+  {% include "partials/sections/_s-works.html" %}
+  {% include "partials/sections/_s-showreel.html" %}
+  {% include "partials/sections/_s-partners.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

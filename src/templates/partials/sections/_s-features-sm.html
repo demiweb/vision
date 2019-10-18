@@ -1,0 +1,47 @@
+{%set
+features = {
+  mod: 'features--grid',
+  list: [
+    { mod: 'feature--sm', icon: 'headset', title: { simple: 'VR <strong>in studios</strong>' } },
+    { mod: 'feature--sm', icon: 'robotic-arm', title: { simple: 'Robotic <strong>Systems</strong>' } },
+    { mod: 'feature--sm', icon: 'thought', title: { simple: 'AI' } },
+    { mod: 'feature--sm', icon: 'ar-glasses', title: { simple: 'AR <strong>in studios</strong>' } },
+    { mod: 'feature--sm', icon: 'remote-access', title: { simple: 'Remote <strong>Production</strong>' } },
+    { mod: 'feature--sm', icon: 'server', title: { simple: 'SDN' } },
+    { mod: 'feature--sm', icon: 'television', title: { simple: 'IP' } },
+    { mod: 'feature--sm', icon: 'hd-monitor', title: { simple: 'Ultra <strong>HD</strong>'} }
+  ]
+}
+%}
+
+<!-- begin section -->
+<section class="section pt-mdl">
+  <div class="container">
+    <!-- begin two-cols -->
+    <div class="two-cols">
+      <div class="two-cols__col">
+        <!-- begin text-block -->
+        <div class="text-block">
+          <div class="text-block__title">
+            <h2 class="title title--h2"><small>Innovative</small> Media Infrastructures</h2>
+          </div>
+          <div class="text-block__text">
+            We create smart and reliable systems that save time, money, space 
+and human resources. We work fast and take pride in our reputation.
+          </div>
+
+          <img class="js-lazy" alt="" src="" data-src="./img/Logo-black-lg.png"/>
+        </div>
+        <!-- end text-block -->
+
+        
+      </div>
+
+      <div class="two-cols__col">
+        {% include "partials/_features.html" %}
+      </div>
+    </div>
+    <!-- end two-cols -->
+  </div>
+</section>
+<!-- end section -->

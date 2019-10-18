@@ -1,0 +1,50 @@
+<div class="container">
+  <!-- begin menu -->
+  <div class="menu">
+    <div class="menu__left">
+      <div class="menu__nav">
+        {{ mixins.list(
+          name = 'nav',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { link: 'Home', modLink: 'is-active' },
+            { link: 'About' },
+            { link: 'Solutions' },
+            { link: 'References' },
+            { link: 'Contacts' }
+          ]
+        ) }}
+      </div>
+    </div>
+
+    <div class="menu__right">
+      <div class="menu__text-block">
+        <!-- begin text-block -->
+        <div class="text-block">
+          <div class="text-block__text">Vision House International s.r.o. <br>  
+          Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї</div>
+
+          <div class="text-block__text">
+            <p><a href="tel:+15515531215">+1 551-553-1215</a></p>
+            <p><a href="mailto:info@cimmaintenance.com">info@cimmaintenance.com</a></p>
+          </div>
+        </div>
+        <!-- end text-block -->
+      </div>
+
+      <div class="menu__socials">
+        {{ mixins.list(
+          name = 'social',
+          modifications = { wrap: 'social--sm', item: '', link: '' },
+          label = '<div class="social__title">Follow us</div>',
+          list = [
+            { link: mixins.icon('instagram') },
+            { link: mixins.icon('facebook-logo') },
+            { link: mixins.icon('twitter') }
+          ]
+        ) }}
+      </div>
+    </div>
+  </div>
+  <!-- end menu -->
+</div>

@@ -6,9 +6,11 @@ h1, h2, h3, h4, h5, h6
 
 .title
   line-height: 1
+  font-weight: 700
   small
     font-weight: 300
-    display: block
+    &:not(.is-inline)
+      display: block
   &--h1
     +css-lock(28, 57, 320, 1399, font-size)
   &--h2

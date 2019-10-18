@@ -1,4 +1,5 @@
 .btn
+  $this: &
   display: inline-block
   position: relative
   text-transform: uppercase
@@ -13,6 +14,23 @@
   border-left: 0
   color: $accent
   margin-left: 10px
+  +tr(color .5s)
+  +sm
+    padding-top: 1em
+    padding-bottom: 1em
+  +xs
+    min-width: 0
+    width: calc(100% - 10px)
+  +hover
+    #{$this}__title
+      color: $white
+    #{$this}__icon
+      color: $white
+      left: .2em
+      width: 25px
+    #{$this}__cover
+      +before
+        transform: translate(0, 0)
   &::before, &::after
     content: ''
     position: absolute
@@ -24,6 +42,18 @@
     top: 0
   &::after
     bottom: 0
+  &__cover
+    +coverdiv
+    z-index: 0
+    overflow: hidden
+    +before
+      background-color: currentColor
+      +coverdiv
+      +tr(transform .5s)
+      transform: translate(0, 100%)
+  &__title
+    position: relative
+    z-index: 1
   &__icon
     position: absolute
     z-index: 1
@@ -32,6 +62,7 @@
     transform: translate(0, -50%)
     width: 35px
     height: 14px
+    +tr(transform .5s, left .5s, width .5s)
     +before
       width: 100%
       display: inline-block
@@ -40,6 +71,7 @@
       top: 50%
       transform: translate(0, -50%)
       right: 0
+      // +tr(width .5s)
     +after
       +icon-arrow(0.6, 0.6, 0.06, currentColor, 225, em)
       display: inline-block
@@ -50,3 +82,8 @@
 
   &--inherit
     color: inherit
+    +hover
+      #{$this}__title
+        color: $accent
+      #{$this}__icon
+        color: $accent

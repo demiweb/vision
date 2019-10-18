@@ -1,6 +1,37 @@
 .nav
+  color: $gray-darken
+  li
+    @extend .title
+    @extend .title--h1
+    +notlast
+      margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+  a
+    +tr(color .3s)
+    +hover
+      color: $white
+    &.is-active
+      color: $white
+
   &--footer
+    color: inherit
     li
       display: inline-block
       margin-left: 30px
       margin-right: 30px
+      font-size: $fz !important
+      font-weight: 300
+      margin-bottom: 0 !important
+      +lg
+        margin-left: 15px
+        margin-right: 15px
+      +md
+        margin-left: 5px
+        margin-right: 5px
+    a
+      +hover
+        color: $accent
+      &.is-active
+        color: $accent
+      

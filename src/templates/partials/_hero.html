@@ -1,7 +1,7 @@
 <!-- begin hero -->
 <section class="hero js-lazy" data-background-image="./img/hero/{{ hero.bg }}">
   <div class="hero__top">
-    <div class="hero__logo">
+    <div class="hero__logo js-logo">
       <a href="/" class="logo">
         <img class="js-lazy" alt="" src="" data-src="./img/Logo.png"/>
       </a>
@@ -16,16 +16,7 @@
 
   {% if hero.showreel %}
   <div class="hero__show-btn">
-    <!-- begin show-btn -->
-    <div class="show-btn">
-      <button class="show-btn__btn">
-        <span class="show-btn__icon">
-          <img class="js-lazy" alt="" src="" data-src="./img/video.png"/>
-        </span>
-        <span class="show-btn__title">Click to watch our showreel</span>
-      </button>
-    </div>
-    <!-- end show-btn -->
+    {% include "partials/_show-btn.html" %}
   </div>
   {% endif %}
 

@@ -1,4 +1,6 @@
 $control-btn-size: 70px
+$control-btn-size-md: 50px
+$control-btn-size-sm: 30px
 
 .prev, .next
   +inline-flex(center, center)
@@ -6,10 +8,21 @@ $control-btn-size: 70px
   height: $control-btn-size
   background-color: $accent
   color: $white
+  +tr(color .3s, background-color .3s)
   +before
     +icon-arrow(10, 10, 1, currentColor, 45)
     display: block
     margin-left: .3em
+  +hover
+    background-color: $white
+    color: $accent
+    box-shadow: 0 0 4px rgba($black, .1)
+  +md
+    width: $control-btn-size-md
+    height: $control-btn-size-md
+  +sm
+    width: $control-btn-size-sm
+    height: $control-btn-size-sm
 
 .next
   transform: scaleX(-1)
@@ -24,6 +37,18 @@ $control-btn-size: 70px
       .tns-ovh
         padding-top: 80px
         padding-bottom: 80px
+      +r(1600)
+        padding-left: $control-btn-size + 15px
+        padding-right: $control-btn-size + 15px
+      +md
+        padding-left: $control-btn-size-md + 15px
+        padding-right: $control-btn-size-md + 15px
+        .tns-ovh
+          padding-top: 50px
+          padding-bottom: 50px
+      +sm
+        padding-left: $control-btn-size-sm + 5px
+        padding-right: $control-btn-size-sm + 5px
   &__next, &__prev
     position: absolute
     top: 50%
@@ -32,5 +57,9 @@ $control-btn-size: 70px
   &__next
     right: -$control-btn-size - 15px
     transform: translate(0, -50%) scaleX(-1)
+    +r(1600)
+      right: 0
   &__prev
     left: -$control-btn-size - 15px
+    +r(1600)
+      left: 0

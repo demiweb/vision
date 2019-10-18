@@ -2,6 +2,8 @@
   +flex(flex-start, normlal, row, wrap)
   &__item
     width: 50%
+    +md
+      width: 100%
 
 .work-link
   +cover
@@ -11,10 +13,18 @@
   height: 100%
   padding-top: 30%
   color: $white
+  +hover
+    .link
+      +before
+        transform: translate(10px, -50%)
+      +after
+        transform: translate(10px, -50%) rotate(225deg) !important
   +lg
     padding: $padding-page-left-lg
+    padding-top: 30%
   +md
     padding: $padding-page-left-md
+    padding-top: 30%
   +before
     +coverdiv
     background-color: rgba($black, .4)

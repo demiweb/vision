@@ -14,6 +14,9 @@
     width: 100%
     padding-left: calc(#{$header-width} + 15px)
     padding-right: calc(#{$header-width} + 15px)
+    +md
+      padding-left: 0
+      padding-right: 0
   &__logo
     position: absolute
     z-index: 1
@@ -23,6 +26,11 @@
       left: $padding-page-left-lg
     +md
       left: $padding-page-left-md
+    &.is-top
+      position: fixed
+      z-index: 15
+      +md
+        top: calc(#{$header-height-md} + 15px)
   &__block
     width: 50%
     margin-bottom: -$margin-bottom

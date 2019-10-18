@@ -16,11 +16,23 @@ class MySlider {
         prevButton,
         nextButton,
         onInit,
-        items: 4,
+        items: 1,
         mouseDrag: true,
         loop: true,
         nav: false,
-        gutter: 30,
+        gutter: 10,
+        responsive: {
+          576: {
+            items: 2,
+          },
+          992: {
+            items: 3,
+            gutter: 30,
+          },
+          1200: {
+            items: 4,
+          },
+        },
       },
     });
   }

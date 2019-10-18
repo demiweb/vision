@@ -9,6 +9,9 @@ import setHTMLClassNames from './components/setHTMLClassNames';
 import setLazy from './components/setLazy';
 import { setVhProperty } from './helpers';
 import mySlider from './components/sliders/setSliders';
+import setTextareaHeight from './components/setTextareaHeight';
+import menu from './components/toggleMenu';
+import toggleHeader from './components/toggleHeader';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -16,4 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setLazy();
   setVhProperty();
   mySlider.init();
+  setTextareaHeight();
+  menu.init();
+  toggleHeader();
 });
