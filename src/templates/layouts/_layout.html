@@ -14,6 +14,12 @@
 
     <!-- BEGIN content -->
     <div class="out{% if outClass %} {{ outClass }}{% endif %}">
+
+      <div class="top-logo js-logo">
+        <a href="/" class="logo">
+          <img class="js-lazy" alt="" src="" data-src="./img/Logo.png"/>
+        </a>
+      </div>
       {% include "partials/_header.html" %}
       <!-- begin main -->
       <main class="main{% if mainClass %} {{ mainClass }}{% endif %}">

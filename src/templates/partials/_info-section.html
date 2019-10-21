@@ -1,0 +1,40 @@
+<!-- begin section -->
+<section class="section section--black-light">
+  <div class="container">
+    <!-- begin info-page -->
+    <div class="info-page">
+      <div class="info-page__left">
+        <!-- begin text-block -->
+        <div class="text-block">
+          {% if infoSection.title %}
+          <div class="text-block__title">
+            <h1 class="title title--h2 title--accent">{{ infoSection.title | safe }}</h1>
+          </div>
+          {% endif %}
+          {% if infoSection.text %}
+          <div class="text-block__text">{{ infoSection.text | safe }}</div>
+          {% endif %}
+
+          {% if infoSection.btn %}
+          <div class="text-block__btn">
+            {{ mixins.btn(
+              title = 'go back home',
+              mod = 'btn--inherit',
+              combine = true
+            ) }}
+          </div>
+          {% endif %}
+        </div>
+        <!-- end text-block -->
+      </div>
+      
+      {% if infoSection.img %}
+      <div class="info-page__right">
+        <img class="js-lazy" alt="" src="" width="{{ infoSection.img.width }}" height="{{ infoSection.img.height }}" data-src="./img/{{ infoSection.img.src or infoSection.img }}"/>
+      </div>
+      {% endif %}
+    </div>
+    <!-- end info-page -->
+  </div>
+</section>
+<!-- end section -->

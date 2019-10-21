@@ -78,6 +78,8 @@
       transform: translate(0, 100%)
       +ready
         +tr(transform .5s)
+      +md
+        display: none
 
     +md
       background-color: transparent
@@ -90,9 +92,9 @@
     bottom: 0
     width: calc(100vw - #{$header-width})
     z-index: 1
-    background-color: $black
+    background-color: $black-light
     color: $white
-    transform: translate(calc(100% + #{$header-width}), 0)
+    transform: translate(100%, 0)
     padding-top: 15px
     padding-bottom: 15px
     +ready
@@ -112,7 +114,7 @@
       top: 100%
       height: calc(100vh - #{$header-height-md})
       height: calc((var(--vh, 1vh) * 100) - #{$header-height-md})
-      transform: translate(0, calc(-100% - #{$header-height-md}))
+      transform: translate(0, -100%)
       padding-right: 60px
       padding-top: 80px
   &__form
@@ -120,6 +122,9 @@
     padding-right: 15px
     overflow-x: hidden
     +vertical
+    .contacts-form
+      display: inline-block
+      vertical-align: middle
     +md
       padding-right: 15px
 
@@ -174,9 +179,11 @@
 
   &__title
     display: block
-    transform: translate(calc(50% + .7em), 0) rotate(90deg)
+    // transform: translate(calc(50% + .7em), 0) rotate(90deg)
+    transform: translate(50%, 0) rotate(90deg)
     transform-origin: left top
     white-space: nowrap
+    margin-right: -1.4em
   &__icon
     .icon
       font-size: 24px

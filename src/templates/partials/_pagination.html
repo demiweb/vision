@@ -1,0 +1,17 @@
+<div class="section__pagination">
+  <div class="container">
+    {{ mixins.list(
+      name = 'pagination',
+      modifications = { wrap: '', item: '', link: '' },
+      list = [
+        { link: ' ', modLink: 'prev' },
+        { link: '1' },
+        { link: '2', modLink: 'is-active' },
+        { link: '3' },
+        { item: '...' },
+        { link: '12' },
+        { link: ' ', modLink: 'next' }
+      ]
+    ) }}
+  </div>
+</div>

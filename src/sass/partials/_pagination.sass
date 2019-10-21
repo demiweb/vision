@@ -1,0 +1,18 @@
+.pagination
+  color: $gray-darken
+  text-align: center
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-left: 8px
+    margin-right: 8px
+  a
+    +tr(color .3s)
+    &.is-active
+      color: $white
+    +hover
+      color: $white
+      &.prev, &.next
+        background-color: transparent
+        color: $accent
+        border: 1px solid  $accent

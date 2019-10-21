@@ -23,6 +23,19 @@
     </div>
     <!-- end feature -->
     {% endif %}
+
+    {% if features.achieve %}
+    <!-- begin achieve -->
+    <div class="achieve js-lazy" data-background-image="./img/{{ i.img }}">
+      <div class="achieve__content">
+        <div class="achieve__nmb">{{ i.nmb }}</div>
+        <div class="achieve__title">
+          <h5 class="title title--h5">{{ i.title | safe }}</h5>
+        </div>
+      </div>
+    </div>
+    <!-- end achieve -->
+    {% endif %}
   </div>
   {% endfor %}
 </div>

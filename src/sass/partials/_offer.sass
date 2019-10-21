@@ -1,0 +1,33 @@
+.offer
+  +flex(flex-start, normal, row, wrap)
+  &__item
+    width: 25%
+    +md
+      width: 50%
+    +xs
+      width: 100%
+
+.offer-item
+  +cover
+  color: $white
+  text-align: center
+  padding-top: 60%
+  padding-bottom: 60%
+  height: 100%
+  position: relative
+  +xs
+    padding-top: 40%
+    padding-bottom: 40%
+  &__nmb
+    +image('feature.png')
+    background-position: 0 0
+    background-repeat: no-repeat
+    background-size: auto
+    position: absolute
+    z-index: 1
+    top: 20px
+    right: 20px
+    width: 80px
+    height: 80px
+    padding-top: 20px
+    padding-left: 10px

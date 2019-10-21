@@ -1,12 +1,10 @@
 <!-- begin hero -->
-<section class="hero js-lazy" data-background-image="./img/hero/{{ hero.bg }}">
-  <div class="hero__top">
-    <div class="hero__logo js-logo">
-      <a href="/" class="logo">
-        <img class="js-lazy" alt="" src="" data-src="./img/Logo.png"/>
-      </a>
-    </div>
+<section class="hero{% if hero.mod  %} {{ hero.mod }}{% endif %}">
+  {% if hero.bg %}
+    <div class="hero__bg js-lazy" data-background-image="./img/hero/{{ hero.bg }}"></div>
+  {% endif %}
 
+  <div class="hero__top">
     <div class="container">
       <div class="hero__phone">
         <a href="tel:+15515531215">+1 551-553-1215</a>
@@ -15,9 +13,11 @@
   </div>
 
   {% if hero.showreel %}
-  <div class="hero__show-btn">
+  {# <div class="hero__show-btn"> #}
+    {% set showBtn = { mod: 'hero__show-btn' } %}
     {% include "partials/_show-btn.html" %}
-  </div>
+    
+  {# </div> #}
   {% endif %}
 
   <div class="hero__block">
@@ -36,17 +36,15 @@
       {% if hero.scroll %}
       <div class="hero-block__scroll">
         <!-- begin scroll-down -->
-        <a href="#" class="scroll-down">
+        <button class="scroll-down js-scroll-down">
           <span class="scroll-down__title">discover more</span>
           <span class="scroll-down__arrow"><span></span></span>
-        </a>
+        </button>
         <!-- end scroll-down -->
       </div>
       {% endif %}
     </div>
     <!-- end hero-block -->
-  </div>
-
-  
+  </div>  
 </section>
 <!-- end hero -->

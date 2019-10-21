@@ -1,0 +1,71 @@
+---
+title: installations
+page: installations
+hero: {
+  mod: 'hero--black-light',
+  bg: 'bg-hero-installations.jpg',
+  title: '<small>Discover our</small> installations',
+  subttl: 'Take a look at a few of our numerous innovative projects <br>
+for TV, new media and sports.',
+  scroll: true
+}
+projects: [
+  {
+    img: 'works/03.jpg',
+    title: 'Halyk Arena',
+    label: 'Sports',
+    text: 'Multisport media system, LED screens, scoring and statistics
+boards, camera positions for multi-purpose 
+arena in Kazakhstan',
+    btn: {
+      title: 'Browse project',
+      mod: 'btn--inherit'
+    }
+  },
+  {
+    mod: 'project--reverse',
+    img: 'works/01.jpg',
+    title: 'PRIAMY Channel',
+    label: 'New media',
+    text: 'Interactive TV system for a leading
+commercial channel in Ukraine',
+    btn: {
+      title: 'Browse project',
+      mod: 'btn--inherit'
+    }
+  },
+  {
+    img: 'works/02.jpg',
+    title: 'NASH Channel',
+    label: 'TV',
+    text: 'Brand new informational channel in Ukraine',
+    btn: {
+      title: 'Browse project',
+      mod: 'btn--inherit'
+    }
+  },
+  {
+    mod: 'project--reverse',
+    img: 'works/04.jpg',
+    title: 'Boris Aleksandrov
+Sports Palace',
+    label: 'Sports',
+    text: 'Giant LED screen, LED perimeters and projection 
+systems in modern volleyball arena 
+in Kazakhstan',
+    btn: {
+      title: 'Browse project',
+      mod: 'btn--inherit'
+    }
+  }
+]
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-projects.html" %}
+  {% include "partials/sections/_s-partners.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

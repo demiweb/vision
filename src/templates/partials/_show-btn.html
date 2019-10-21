@@ -1,10 +1,12 @@
 <!-- begin show-btn -->
-<div class="show-btn">
-  <button class="show-btn__btn">
+<div class="show-btn{% if showBtn.mod %} {{ showBtn.mod }}{% endif %}">
+  <button class="show-btn__btn js-popup-open" data-popup-target="showreel">
     <span class="show-btn__icon">
       <img class="js-lazy" alt="" src="" data-src="./img/video.png"/>
     </span>
     <span class="show-btn__title">Click to watch our showreel</span>
   </button>
+
+  {% include "partials/_showreel.html" %}
 </div>
 <!-- end show-btn -->

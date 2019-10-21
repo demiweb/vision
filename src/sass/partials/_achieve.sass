@@ -1,0 +1,25 @@
+.achieve
+  background-color: $white
+  background-position: 80% 90%
+  background-size: 40%
+  background-repeat: no-repeat
+  padding: 25px
+  min-height: 240px
+  +md
+    min-height: 200px
+  +xs
+    min-height: 300px
+  +xss
+    min-height: 240px
+  &__nmb
+    @extend .title
+    @extend .title--h2
+    color: $accent
+    position: relative
+    z-index: 0
+    margin-bottom: -.3em
+  &__title
+    position: relative
+    background-color: $white
+    z-index: 1
+    

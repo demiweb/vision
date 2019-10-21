@@ -25,10 +25,6 @@ body
   margin-left: auto
   margin-right: auto
 
-.logo
-  display: inline-block
-  font-size: 0
-
 .out
   +md
     padding-top: $header-height-md
@@ -138,6 +134,10 @@ body
       margin-bottom: 10px
   &__text
     margin-bottom: 40px
+    p
+      margin-bottom: 20px
+      +md
+        margin-bottom: 10px
     +lg
       margin-bottom: 30px
     +md
@@ -157,3 +157,35 @@ body
       width: 100%
     +sm
       margin-bottom: 15px
+
+.info-page
+  height: 100vh
+  height: calc(var(--vh, 1vh) * 100)
+  +flex(flex-start, normal, row, wrap)
+  color: $white
+  +md
+    height: calc(100vh - #{$header-height-md})
+    height: calc((var(--vh, 1vh) * 100) - #{$header-height-md})
+  +xs
+    height: auto
+    padding-top: 80px
+    padding-bottom: 30px
+  &__left, &__right
+    width: 50%
+    +flex(center, normal, column)
+    +xs
+      width: 100%
+      padding-left: 0
+      padding-right: 0
+  &__left
+    padding-right: 15px
+    +xs
+      order: 1
+  &__right
+    padding-left: 15px
+    img
+      display: inline-block
+    +xs
+      align-items: center
+      order: 0
+      margin-bottom: 30px

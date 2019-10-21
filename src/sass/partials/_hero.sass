@@ -1,15 +1,22 @@
 .hero
-  $margin-bottom: 70px
+  $padding-bottom: 70px
   color: $white
   height: 100vh
-  height: calc(var(--vh, 1vh) * 100)
-  +cover
+  height: calc(var(--vh, 1vh) * 100)  
   position: relative
   padding-top: 30px
   +flex(space-between, normal, column)
-  margin-bottom: $margin-bottom
   +md
-    margin-bottom: 0
+    height: calc(100vh - #{$header-height-md})
+    height: calc((var(--vh, 1vh) * 100) - #{$header-height-md})
+  &__bg
+    +cover
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    right: 0
+    bottom: $padding-bottom
   &__top
     width: 100%
     padding-left: calc(#{$header-width} + 15px)
@@ -17,26 +24,13 @@
     +md
       padding-left: 0
       padding-right: 0
-  &__logo
-    position: absolute
-    z-index: 1
-    top: 30px
-    left: $padding-page-left
-    +lg
-      left: $padding-page-left-lg
-    +md
-      left: $padding-page-left-md
-    &.is-top
-      position: fixed
-      z-index: 15
-      +md
-        top: calc(#{$header-height-md} + 15px)
+ 
   &__block
     width: 50%
-    margin-bottom: -$margin-bottom
+    position: relative
+    z-index: 1
     +md
       width: 100%
-      margin-bottom: 0
   &__show-btn
     position: absolute
     z-index: 1
@@ -48,13 +42,14 @@
   &__phone
     text-align: right
 
+  &--black-light
+    background-color: $black-light
+
 .hero-block
   background-color: $accent
   padding: $padding-page-left 100px 100px $padding-page-left
-  +lg
-    padding: $padding-page-left-lg 50px 50px $padding-page-left-lg
-  +md
-    padding: $padding-page-left-md 30px 30px $padding-page-left-md
+  +xll
+    padding: $padding-page-left-xll 50px 50px $padding-page-left-xll
   &__title
     margin-bottom: 20px
     +md

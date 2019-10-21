@@ -1,0 +1,18 @@
+.logo
+  display: inline-block
+  font-size: 0
+
+.top-logo
+  position: absolute
+  z-index: 10
+  top: 30px
+  left: $padding-page-left
+  +xll
+    left: $padding-page-left-xll
+  +md
+    top: 15px + $header-height-md
+  &.is-top
+    position: fixed
+    z-index: 15
+    +md
+      top: calc(#{$header-height-md} + 15px)

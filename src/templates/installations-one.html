@@ -1,0 +1,57 @@
+---
+title: installations-one
+page: installations-one
+hero: {
+  mod: 'hero--black-light',
+  bg: 'bg-hero-installations-one.jpg',
+  title: '<small>Interactive Television</small> for PRIAMY Channel',
+  subttl: 'Game changing platform for communication with viewers. Integrated polls through 
+mobile application and telephone. Dramatic growth of digital audience.',
+  scroll: true
+}
+projects: [
+  {
+    mod: 'project--reverse',
+    img: 'works/one-item-01.jpg',
+    noBtn: true,
+    text: "
+      <p>In 2018 one of Ukraine's leading commercial channels PRIAMY got an
+      unbeatable competitive advantage: the viewers became influential 
+      participants of the channel's talk shows.</p>
+      <p>Through innovative mobile application PRIAMY involved new generation
+      of digital audience who refuse to watch conventional television and prefer 
+      to consume video content via smartphones, tablets and computers.</p>
+      <p>Digital audience can vote through mobile applications, those who choose
+      traditional TV used to vote by phone. Guests in studio also vote through 
+      app on the channel's iPads. The poll results are aggregated by special platform, 
+      analyzed, graphically processed and delivered on air and on screens.</p>
+    "
+  },
+  {
+    img: 'works/one-item-02.jpg',
+    noBtn: true,
+    text: '
+      <p>The poll system is used by PRIAMY channel every day, number of those
+      who install the app grows drastically every day. About 30 000 people
+      vote daily, on days of important political events the number of poll
+      participants reaches 50 000.</p>
+      <p>New generation of viewers often chooses not to invest in any TV sets, 
+      but rather watch video content on other screens like notebooks, tablets
+      or smartphones. PRIAMY channel invested in new media platform to cover
+      all audiences from "classical" TV viewers to digital generation. </p>
+    '
+  }
+]
+sectionPartners: {
+  mod: 'pb-mdl'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-projects.html" %}
+  {% include "partials/sections/_s-works.html" %}
+  {% include "partials/sections/_s-partners.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

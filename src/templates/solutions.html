@@ -1,0 +1,59 @@
+---
+title: solutions
+page: solutions
+hero: {
+  bg: 'bg-hero-solutions.jpg',
+  title: '<small>Solutions for media</small> and entertainment businesses',
+  subttl: "Elegant projects, fast deployment, excellent service, reliable strategic partnership.
+Here's what we offer media facilities.",
+  scroll: true
+}
+projects: [
+  {
+    mod: 'project--reverse project--transp',
+    img: 'solutions/01.jpg',
+    title: 'TV',
+    text: 'Turnkey channels of all kinds, studios, virtual and augmented reality
+on TV, OB-Vans, remote production, newsrooms, 
+film production, post, delivery.',
+    btn: {
+      title: 'learn more'
+    }
+  },
+  {
+    mod: 'project--transp', 
+    img: 'works/03.jpg',
+    title: 'Sports',
+    text: 'Big screens, video cubes, lighting, sound, control rooms, cameras, 
+replays and cabling for arenas and stadiums. 
+Infrastructures for esports.',
+    btn: {
+      title: 'learn more'
+    }
+  },
+  {
+    mod: 'project--reverse project--transp',
+    img: 'solutions/03.jpg',
+    title: 'New Media',
+    text: 'Software and hardware systems for creating and delivering 
+video content to any screen.',
+    btn: {
+      title: 'learn more'
+    }
+  }
+]
+sectionProjects: {
+  mod: 'pt-mdl pb-mdl'
+}
+sectionPartners: {
+  mod: 'pb-mdl'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-projects.html" %}
+  {% include "partials/sections/_s-partners.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

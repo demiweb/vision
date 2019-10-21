@@ -3,3 +3,10 @@ ProjectTitle: vision house
 PageList:
 - file: home.html
 - file: about.html
+- file: contacts.html
+- file: installations.html
+- file: installations-one.html
+- file: solutions.html
+- file: tv.html
+- file: thanks.html
+- file: 404.html

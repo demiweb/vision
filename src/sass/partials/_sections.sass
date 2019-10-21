@@ -1,0 +1,128 @@
+.s-solutions
+  &__img
+    +cover
+    padding-top: 60%
+    margin-bottom: 30px
+  &__link
+    text-align: center
+  &__right
+    // margin-left: -15px
+  &__text-block
+    padding-left: percentage(1/6)
+    margin-bottom: 85px
+    +xl
+      padding-left: 15px
+      margin-bottom: 60px
+    +lg
+      margin-bottom: 40px
+    +md
+      margin-bottom: 20px
+
+.s-about
+  color: $white
+  overflow: hidden
+  padding-bottom: 90px
+  +xl
+    padding-bottom: 45px
+  +md
+    padding-bottom: 0
+  &__inner
+    +flex
+    +md
+      display: block
+  &__left
+    width: 50%
+    +md
+      width: auto
+      margin-left: -15px
+      margin-right: -15px
+  &__right
+    width: 50%
+    +md
+      width: auto
+      margin-left: -15px
+      margin-right: -15px
+  &__img
+    height: 100%
+    margin-right: -75px
+    margin-top: 90px
+    +cover
+    +xl
+      margin-top: 45px
+      margin-right: 0
+    +md
+      margin-top: 0
+      padding-top: 50%
+    +xs
+      padding-top: 70%
+  &__content
+    background-color: $accent
+    position: relative
+    padding-top: 75px
+    padding-bottom: 75px
+    padding-right: percentage(1/6)
+    +xl
+      padding-top: 50px
+      padding-bottom: 50px
+    +lg
+      padding-top: 40px
+      padding-bottom: 40px
+      padding-right: 15px
+    +md
+      padding-left: 15px
+    +before
+      position: absolute
+      top: 0
+      bottom: 0
+      background-color: $accent
+      width: 50vw
+      right: 100%
+      +md
+        display: none
+
+.s-contacts
+  $this: &
+  overflow: hidden
+  &.section--hero
+    #{$this}__content
+      +md
+        padding-top: 80px
+  &__content
+    padding-top: 20%
+    padding-bottom: 20%
+    background-color: $accent
+    color: $white
+    position: relative
+    +md
+      padding-top: 10%
+      padding-bottom: 10%
+      padding-left: 15px
+      padding-right: 15px
+      margin-left: -15px
+      margin-right: -15px
+      +before
+        display: none
+        
+
+    +before
+      background-color: $accent
+      top: 0
+      bottom: 0
+      right: 100%
+      width: 50vw
+      position: absolute
+
+.s-showreel  
+  color: $white
+  &__inner
+    position: relative
+    padding-top: 40%
+    +sm
+      padding-top: 60%
+    +xs
+      padding-top: 90%
+  &__btn
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    right: percentage(1/12)

@@ -1,0 +1,27 @@
+.showreel
+  // position: fixed
+  // z-index: 20
+  // width: 100%
+  // height: 100%
+  // left: 0
+  // right: 0
+  // top: 0
+  // bottom: 0
+  // background-color: $black
+
+.popup-overlay
+  position: fixed
+  z-index: 20
+  background-color: $black-light
+  top: 50%
+  left: 50%
+  // width: 100vw
+  // height: 100vh
+  // +scale(0)
+  border-radius: 50%
+  // +ready
+  height: 80px
+  width: 80px
+  +tr(transform 1s)
+  &.is-active
+    transform: scale(30) 

@@ -1,0 +1,24 @@
+<!-- begin section -->
+<section class="section{% if sectionProjects.mod %} {{ sectionProjects.mod }}{% else %} section--black-light pt-mdl pb-mdl{% endif %}">
+  {% if page === 'installations' %}
+  <div class="container">
+    <div class="section__tabs-nav">
+      <!-- begin section-tabs-nav -->
+      <div class="section-tabs-nav">
+        <button class="section-tabs-nav__btn is-active">All</button>
+        <button class="section-tabs-nav__btn">TV</button>
+        <button class="section-tabs-nav__btn">Sports</button>
+        <button class="section-tabs-nav__btn">New media</button>
+      </div>
+      <!-- end section-tabs-nav -->
+    </div>
+  </div>
+  {% endif %}
+
+  {% include "partials/_projects.html" %}
+  
+  {% if page === 'installations' %}
+  {% include "partials/_pagination.html" %}
+  {% endif %}
+</section>
+<!-- end section -->

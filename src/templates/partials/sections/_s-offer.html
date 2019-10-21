@@ -1,0 +1,35 @@
+{%set
+offer = [
+  { img: '01.jpg', nmb: '01', title: 'Broadcasters' },
+  { img: '02.jpg', nmb: '02', title: '<small class="is-inline">Media</small> networks' },
+  { img: '03.jpg', nmb: '03', title: '<small class="is-inline">Movie</small> productions' },
+  { img: '04.jpg', nmb: '04', title: '<small class="is-inline">Radio</small> channels' }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-mdl">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2"><small class="is-inline">We offer</small> projects for</h2>
+    </div>
+  </div>
+
+  <!-- begin offer -->
+  <div class="offer">
+    {% for i in offer %}
+    <div class="offer__item">
+      <!-- begin offer-item -->
+      <div class="offer-item js-lazy" data-background-image="./img/tv/{{ i.img }}">
+        <div class="offer-item__nmb">{{ i.nmb | safe }}</div>
+        <div class="offer-item__title">
+          <div class="title title--h2">{{ i.title | safe }}</div>
+        </div>
+      </div>
+      <!-- end offer-item -->
+    </div>
+    {% endfor %}
+  </div>
+  <!-- end offer -->
+</section>
+<!-- end section -->
