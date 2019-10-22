@@ -57,8 +57,8 @@
                   <div class="menu__text-block">
                     <!-- begin text-block -->
                     <div class="text-block">
-                      <div class="text-block__text">Vision House International s.r.o. <br> Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї</div>
-                      <div class="text-block__text">
+                      <div class="text-block__text js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">Vision House International s.r.o. <br> Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї</div>
+                      <div class="text-block__text js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">
                         <p><a href="tel:+15515531215">+1 551-553-1215</a></p>
                         <p><a href="mailto:info@cimmaintenance.com">info@cimmaintenance.com</a></p>
                       </div>
@@ -204,7 +204,11 @@
             <!-- begin showreel -->
             <div class="showreel js-popup" data-popup="showreel">
               <div class="showreel__inner">
-                <button class="showreel__close js-popup-close"></button> this is showreel popup </div>
+                <button class="showreel__close js-popup-close"></button>
+                <div class="showreel__video">
+                  <video src="" data-src="./video/Vision.mp4" controls="" class="js-lazy"></video>
+                </div>
+              </div>
             </div>
             <!-- end showreel -->
           </div>
@@ -212,11 +216,11 @@
           <div class="hero__block">
             <!-- begin hero-block -->
             <div class="hero-block">
-              <div class="hero-block__title">
+              <div class="hero-block__title js-anim-el" data-anim-name="fadeInUp">
                 <h1 class="title title--h1"><small>Innovative solutions</small> for Media Businesses</h1>
               </div>
-              <div class="hero-block__subttl">We create smart and reliable systems that save time, money, space and human resources for TV, sports and new media platforms. We work fast and take pride in our reputation in systems integration business.</div>
-              <div class="hero-block__scroll">
+              <div class="hero-block__subttl js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">We create smart and reliable systems that save time, money, space and human resources for TV, sports and new media platforms. We work fast and take pride in our reputation in systems integration business.</div>
+              <div class="hero-block__scroll js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">
                 <!-- begin scroll-down -->
                 <button class="scroll-down js-scroll-down">
                   <span class="scroll-down__title">discover more</span>
@@ -233,7 +237,7 @@
         <section class="section s-solutions pt-mdl pb-lg">
           <div class="section-half-full">
             <div class="section-half-full__left">
-              <div class="s-solutions__img js-lazy" data-background-image="./img/home/01.jpg"></div>
+              <div class="s-solutions__img no-animation js-lazy js-anim-el" data-anim-name="fadeInRightLg" data-background-image="./img/home/01.jpg"></div>
               <div class="s-solutions__link">
                 <a href="#" class="link">bROWSE ALL SOLUTIONS</a>
               </div>
@@ -245,18 +249,18 @@
                     <div class="s-solutions__text-block">
                       <!-- begin text-block -->
                       <div class="text-block">
-                        <div class="text-block__label">
+                        <div class="text-block__label js-anim-el" data-anim-name="fadeInUp">
                           <!-- begin text-label -->
                           <div class="text-label">
                             <div class="text-label__title">SOLUTIONS</div>
                           </div>
                           <!-- end text-label -->
                         </div>
-                        <div class="text-block__title">
+                        <div class="text-block__title js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">
                           <h2 class="title title--h2">Sports</h2>
                         </div>
-                        <div class="text-block__text">Big screens, video cubes, lighting, sound, control rooms, cameras, replays and cabling for arenas and stadiums. Infrastructures for esports.</div>
-                        <div class="text-block__btn">
+                        <div class="text-block__text js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">Big screens, video cubes, lighting, sound, control rooms, cameras, replays and cabling for arenas and stadiums. Infrastructures for esports</div>
+                        <div class="text-block__btn js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.6s">
                           <a href="#" class="btn">
                             <span class="btn__title">lEARN MORE</span>
                             <span class="btn__icon"></span>
@@ -267,9 +271,9 @@
                       <!-- end text-block -->
                     </div>
                     <!-- begin solutions-links -->
-                    <div class="solutions-links">
+                    <div class="solutions-links js-stagger-wrap">
                       <!-- begin solutions-link -->
-                      <a href="#" class="solutions-link">
+                      <a href="#" class="solutions-link js-stagger-el">
                         <span class="solutions-link__bg js-lazy" data-background-image="./img/home/solutions-01.jpg"></span>
                         <span class="solutions-link__content">
                           <span class="solutions-link__icon">
@@ -286,7 +290,7 @@
                       </a>
                       <!-- end solutions-link -->
                       <!-- begin solutions-link -->
-                      <a href="#" class="solutions-link">
+                      <a href="#" class="solutions-link js-stagger-el">
                         <span class="solutions-link__bg js-lazy" data-background-image="./img/home/solutions-01.jpg"></span>
                         <span class="solutions-link__content">
                           <span class="solutions-link__icon">
@@ -303,7 +307,7 @@
                       </a>
                       <!-- end solutions-link -->
                       <!-- begin solutions-link -->
-                      <a href="#" class="solutions-link">
+                      <a href="#" class="solutions-link js-stagger-el">
                         <span class="solutions-link__bg js-lazy" data-background-image="./img/home/solutions-01.jpg"></span>
                         <span class="solutions-link__content">
                           <span class="solutions-link__icon">
@@ -334,8 +338,8 @@
                 <small>Innovative</small> media Infrastructures </h2>
             </div>
             <!-- begin features -->
-            <div class="features">
-              <div class="features__item">
+            <div class="features js-stagger-wrap">
+              <div class="features__item js-stagger-el">
                 <!-- begin feature -->
                 <div class="feature">
                   <div class="feature__icon">
@@ -353,7 +357,7 @@
                 </div>
                 <!-- end feature -->
               </div>
-              <div class="features__item">
+              <div class="features__item js-stagger-el">
                 <!-- begin feature -->
                 <div class="feature">
                   <div class="feature__icon">
@@ -373,7 +377,7 @@
                 </div>
                 <!-- end feature -->
               </div>
-              <div class="features__item">
+              <div class="features__item js-stagger-el">
                 <!-- begin feature -->
                 <div class="feature">
                   <div class="feature__icon">
@@ -391,7 +395,7 @@
                 </div>
                 <!-- end feature -->
               </div>
-              <div class="features__item">
+              <div class="features__item js-stagger-el">
                 <!-- begin feature -->
                 <div class="feature">
                   <div class="feature__icon">
@@ -410,7 +414,7 @@
                 </div>
                 <!-- end feature -->
               </div>
-              <div class="features__item">
+              <div class="features__item js-stagger-el">
                 <!-- begin feature -->
                 <div class="feature">
                   <div class="feature__icon">
@@ -440,19 +444,21 @@
         <section class="section pt-lg pb-xl">
           <div class="container">
             <div class="section__title-block">
+              <!-- begin text-block -->
               <div class="text-block">
-                <div class="text-block__label">
+                <div class="text-block__label js-anim-el" data-anim-name="fadeInUp">
                   <!-- begin text-label -->
                   <div class="text-label">
                     <div class="text-label__title">REFERENCES</div>
                   </div>
                   <!-- end text-label -->
                 </div>
-                <div class="text-block__title">
+                <div class="text-block__title js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">
                   <h2 class="title title--h2"><small>We’ve got</small> the expertise you need</h2>
                 </div>
-                <div class="text-block__text text--gray-dark">Take a look at some of our numerous projects</div>
+                <div class="text-block__text text--gray-dark js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">Take a look at some of our numerous projects</div>
               </div>
+              <!-- end text-block -->
             </div>
           </div>
           <!-- begin works-links -->
@@ -538,18 +544,18 @@
                 <div class="s-about__content">
                   <!-- begin text-block -->
                   <div class="text-block">
-                    <div class="text-block__label">
+                    <div class="text-block__label js-anim-el" data-anim-name="fadeInUp">
                       <!-- begin text-label -->
                       <div class="text-label text-label--inherit">
                         <div class="text-label__title">ABOUT US</div>
                       </div>
                       <!-- end text-label -->
                     </div>
-                    <div class="text-block__title">
-                      <h2 class="title title--h2"><small>We create innovative technological solutions</small> for media businesses</h2>
+                    <div class="text-block__title js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">
+                      <h2 class="title title--h2">We create innovative technological solutions</small> for media businesses</h2>
                     </div>
-                    <div class="text-block__text"> VISION HOUSE INTERNATIONAL builds cutting edge media systems. Our experience, thinking out of the box and strategic approach empower our customers to win in highly competitive media markets. </div>
-                    <div class="text-block__btn">
+                    <div class="text-block__text js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">VISION HOUSE INTERNATIONAL builds cutting edge media systems. Our experience, thinking out of the box and strategic approach empower our customers to win in highly competitive media markets.</div>
+                    <div class="text-block__btn js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.6s">
                       <a href="#" class="btn btn--inherit">
                         <span class="btn__title">more about us</span>
                         <span class="btn__icon"></span>
@@ -561,7 +567,7 @@
                 </div>
               </div>
               <div class="s-about__right">
-                <div class="s-about__img js-lazy" data-background-image="./img/home/02.jpg"></div>
+                <div class="s-about__img no-animation js-lazy js-anim-el" data-anim-name="fadeInLeftLg" data-background-image="./img/home/02.jpg"></div>
               </div>
             </div>
           </div>
@@ -571,15 +577,17 @@
         <section class="section pt-mdl pb-mdl">
           <div class="container">
             <div class="section__title-block">
+              <!-- begin text-block -->
               <div class="text-block">
-                <div class="text-block__title">
+                <div class="text-block__title js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">
                   <h2 class="title title--h2"><small>Our partners</small> around the world</h2>
                 </div>
-                <div class="text-block__text text--gray-dark">We work with the world's greatest vendors to provide the best in breed solutions for our customers</div>
+                <div class="text-block__text text--gray-dark js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">We work with the world's greatest vendors to provide the best in breed solutions for our customers</div>
               </div>
+              <!-- end text-block -->
             </div>
             <!-- begin slider -->
-            <div class="slider__wrap slider--partners__wrap">
+            <div class="slider__wrap slider--partners__wrap js-anim-el" data-anim-name="fadeIn">
               <div class="slider slider--partners js-slider" data-slider="partners">
                 <!-- begin slide -->
                 <div class="slide">
@@ -741,22 +749,22 @@
                 <div class="section-half-full__left-in">
                   <!-- begin text-block -->
                   <div class="text-block s-contacts__content">
-                    <div class="text-block__label">
+                    <div class="text-block__label js-anim-el" data-anim-name="fadeInUp">
                       <!-- begin text-label -->
                       <div class="text-label text-label--inherit">
                         <div class="text-label__title">Contacts</div>
                       </div>
                       <!-- end text-label -->
                     </div>
-                    <div class="text-block__title">
+                    <div class="text-block__title js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">
                       <h2 class="title title--h2"><small>Contact</small> Vision House</h2>
                     </div>
-                    <div class="text-block__text">Vision House International s.r.o. <br> Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї</div>
-                    <div class="text-block__text">
+                    <div class="text-block__text js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">Vision House International s.r.o. <br> Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї</div>
+                    <div class="text-block__text js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">
                       <div><strong><a href="tel:+15515531215">+1 551-553-1215</a></strong></div>
                       <div><strong><a href="mailto:info@cimmaintenance.com">info@cimmaintenance.com</a></strong></div>
                     </div>
-                    <div class="text-block__btn">
+                    <div class="text-block__btn js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.6s">
                       <a href="#" class="btn btn--inherit">
                         <span class="btn__title">contact us</span>
                         <span class="btn__icon"></span>
