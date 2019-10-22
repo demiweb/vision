@@ -4,38 +4,27 @@
     <div class="s-about__inner">
       <div class="s-about__left">
         <div class="s-about__content">
-          <!-- begin text-block -->
-          <div class="text-block">
-            <div class="text-block__label">
-              {{ mixins.label('ABOUT US', 'text-label--inherit') }}
-            </div>
-
-            <div class="text-block__title">
-              <h2 class="title title--h2"><small>We create innovative 
+          {{ mixins.textBlock(
+            blockLabel = { label: 'ABOUT US', mod: 'text-label--inherit' },
+            title = { title: 'We create innovative 
   technological solutions</small>
-  for media businesses</h2>
-            </div>
-
-            <div class="text-block__text">
-              VISION HOUSE INTERNATIONAL builds cutting edge media systems. 
+  for media businesses' },
+            text = [
+              { text: 'VISION HOUSE INTERNATIONAL builds cutting edge media systems. 
   Our experience, thinking out of the box and strategic approach 
-  empower our customers to win in highly competitive media markets.
-            </div>
+  empower our customers to win in highly competitive media markets.' }
+            ],
+            button = {
+              title: 'more about us',
+              mod: 'btn--inherit'
+            }
+          ) }}
 
-            <div class="text-block__btn">
-              {{ mixins.btn(
-                title = 'more about us',
-                mod = 'btn--inherit',
-                combine = true
-              ) }}
-            </div>
-          </div>
-          <!-- end text-block -->
         </div>
       </div>
 
       <div class="s-about__right">
-        <div class="s-about__img js-lazy" data-background-image="./img/home/02.jpg"></div>
+        <div class="s-about__img no-animation js-lazy js-anim-el" data-anim-name="fadeInLeftLg" data-background-image="./img/home/02.jpg"></div>
       </div>
     </div>
   </div>

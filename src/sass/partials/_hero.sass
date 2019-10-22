@@ -2,9 +2,10 @@
   $padding-bottom: 70px
   color: $white
   height: 100vh
-  height: calc(var(--vh, 1vh) * 100)  
+  height: calc(var(--vh, 1vh) * 100)
   position: relative
   padding-top: 30px
+  overflow: hidden
   +flex(space-between, normal, column)
   +md
     height: calc(100vh - #{$header-height-md})
@@ -21,11 +22,14 @@
     width: 100%
     padding-left: calc(#{$header-width} + 15px)
     padding-right: calc(#{$header-width} + 15px)
+    position: relative
+    z-index: 1
     +md
       padding-left: 0
       padding-right: 0
  
   &__block
+    opacity: 0
     width: 50%
     position: relative
     z-index: 1
@@ -52,13 +56,17 @@
     padding: $padding-page-left-xll 50px 50px $padding-page-left-xll
   &__title
     margin-bottom: 20px
+    opacity: 0
     +md
       margin-bottom: 10px
   &__subttl
     margin-bottom: 15px
     color: $accent-lighten
+    opacity: 0
     +md
       margin-bottom: 10px
+  &__scroll
+    opacity: 0
 
 .show-btn
   font-weight: 700

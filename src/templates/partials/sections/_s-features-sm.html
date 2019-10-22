@@ -20,20 +20,14 @@ features = {
     <!-- begin two-cols -->
     <div class="two-cols">
       <div class="two-cols__col">
-        <!-- begin text-block -->
-        <div class="text-block">
-          <div class="text-block__title">
-            <h2 class="title title--h2"><small>Innovative</small> Media Infrastructures</h2>
-          </div>
-          <div class="text-block__text">
-            We create smart and reliable systems that save time, money, space 
-and human resources. We work fast and take pride in our reputation.
-          </div>
-
-          <img class="js-lazy" alt="" src="" data-src="./img/Logo-black-lg.png"/>
-        </div>
-        <!-- end text-block -->
-
+        {{ mixins.textBlock(
+          title = { title: '<small>Innovative</small> Media Infrastructures' },
+          text = [
+            { text: 'We create smart and reliable systems that save time, money, space 
+and human resources. We work fast and take pride in our reputation.' }
+          ],
+          element = '<img class="js-lazy" alt="" src="" data-src="./img/Logo-black-lg.png"/>'
+        ) }}
         
       </div>
 

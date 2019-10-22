@@ -14,7 +14,9 @@ import setTextareaHeight from './components/setTextareaHeight';
 import menu from './components/toggleMenu';
 import toggleHeader from './components/toggleHeader';
 import scrollToNext from './components/scrollTo';
-import myPopup from './components/setPopups';
+import popup from './components/setPopups';
+import animateOnScroll from './components/animateOnScroll';
+import setAnimations from './components/animations/setAnimations';
 
 document.addEventListener('DOMContentLoaded', () => {
   smoothscroll.polyfill();
@@ -27,7 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   menu.init();
   toggleHeader();
   scrollToNext();
-  myPopup.init();
+  popup.init();
+  animateOnScroll();
+  setAnimations();
 });
 
 window.setLazy = setLazy;

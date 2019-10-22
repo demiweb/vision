@@ -1,17 +1,18 @@
 .project
   $this: &
   position: relative
-  color: $white
-    
+  color: $white    
   &__right
     position: absolute
     right: 0
     top: 0
     bottom: 0
     width: 50%
+    overflow: hidden
     +md
       width: auto
       position: static
+
   &--transp
     color: inherit
   &--reverse

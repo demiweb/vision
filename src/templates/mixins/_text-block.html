@@ -1,0 +1,43 @@
+{% from 'mixins/_label.html' import label %}
+{% set label = label %}
+
+{% from 'mixins/_btn.html' import btn %}
+{% set btn = btn %}
+
+{% macro textBlock(blockLabel, title, text, button, mod, element) %}
+<!-- begin text-block -->
+<div class="text-block{% if mod %} {{ mod }}{% endif %}">
+  {% if blockLabel %}
+  <div class="text-block__label js-anim-el" data-anim-name="fadeInUp">
+    {{ label(blockLabel.label or blockLabel, blockLabel.mod) }}
+  </div>
+  {% endif %}
+
+  {% if title %}
+  <div class="text-block__title js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">
+    <h2 class="title title--h2{% if title.mod %} {{ title.mod }}{% endif %}">{{ title.title | safe }}</h2>
+  </div>
+  {% endif %}
+
+  {% if text %}
+    {% for i in text %}
+    <div class="text-block__text{% if i.mod %} {{ i.mod }}{% endif %} js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">{{ i.text | safe }}</div>
+    {% endfor %}
+  {% endif %}
+
+  {% if button.title %}
+  <div class="text-block__btn js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.6s">
+    {{ btn(
+      title = button.title,
+      mod = button.mod,
+      combine = true
+    ) }}
+  </div>
+  {% endif %}
+
+  {% if element %}
+  {{ element | safe }}
+  {% endif %}
+</div>
+<!-- end text-block -->
+{% endmacro %}

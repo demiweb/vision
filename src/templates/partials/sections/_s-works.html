@@ -28,17 +28,14 @@ Palace in Ust-Kamenogorsk'
 <section class="section pt-lg pb-xl">
   <div class="container">
     <div class="section__title-block">
-      <div class="text-block">
-        <div class="text-block__label">
-          {{ mixins.label('REFERENCES') }}
-        </div>
+      {{ mixins.textBlock(
+          blockLabel = 'REFERENCES',
+          title = { title: '<small>We’ve got</small> the expertise you need' },
+          text = [
+            { text: 'Take a look at some of our numerous projects', mod: 'text--gray-dark' }
+          ]
+        ) }}
 
-        <div class="text-block__title">
-          <h2 class="title title--h2"><small>We’ve got</small> the expertise you need</h2>
-        </div>
-
-        <div class="text-block__text text--gray-dark">Take a look at some of our numerous projects</div>
-      </div>
     </div>    
   </div>
 

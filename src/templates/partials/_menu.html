@@ -19,17 +19,15 @@
 
     <div class="menu__right">
       <div class="menu__text-block">
-        <!-- begin text-block -->
-        <div class="text-block">
-          <div class="text-block__text">Vision House International s.r.o. <br>  
-          Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї</div>
+        {{ mixins.textBlock(
+          text = [
+            { text: 'Vision House International s.r.o. <br>  
+          Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї' },
+            { text: '<p><a href="tel:+15515531215">+1 551-553-1215</a></p>
+            <p><a href="mailto:info@cimmaintenance.com">info@cimmaintenance.com</a></p>' }
+          ]
+        ) }}
 
-          <div class="text-block__text">
-            <p><a href="tel:+15515531215">+1 551-553-1215</a></p>
-            <p><a href="mailto:info@cimmaintenance.com">info@cimmaintenance.com</a></p>
-          </div>
-        </div>
-        <!-- end text-block -->
       </div>
 
       <div class="menu__socials">

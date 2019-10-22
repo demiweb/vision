@@ -16,11 +16,24 @@ class MyPopup extends Popup {
     }
   }
 
+  onClose() {
+    if (this.name === 'showreel') {
+      this.closeShowreel();
+    }
+  }
+
   createOverlay() {
     this.overlay = document.createElement('div');
     this.overlay.className = 'popup-overlay';
+
+    const img = this.btn.querySelector('img');
+    const { top, left } = img.getBoundingClientRect();
+    this.overlay.style.width = `${img.clientWidth}px`;
+    this.overlay.style.height = `${img.clientHeight}px`;
+    this.overlay.style.left = `${left}px`;
+    this.overlay.style.top = `${top}px`;
     setTimeout(() => {
-      this.overlay.classList.add(IS_ACTIVE);
+      this.overlay.style.transform = 'scale(30)';
     }, 100);
 
     this.wrap.appendChild(this.overlay);
@@ -38,11 +51,15 @@ class MyPopup extends Popup {
     setTimeout(this.removeOverlay.bind(this), SHOW_DURATION);
   }
 
+  closeShowreel() {
+    this.wrap.style.zIndex = '';
+  }
+
   init() {
     super.init();
   }
 }
 
-const myPopup = new MyPopup();
+const popup = new MyPopup();
 
-export default myPopup;
+export default popup;

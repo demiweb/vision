@@ -12,34 +12,22 @@ section = {
 {% extends "layouts/_section-fixed-right.html" %}
 
 {% block left %}
-<!-- begin text-block -->
-<div class="text-block s-contacts__content">
-  <div class="text-block__label">
-    {{ mixins.label('Contacts', 'text-label--inherit') }}
-  </div>
-
-  <div class="text-block__title">
-    <h2 class="title title--h2"><small>Contact</small>
-Vision House</h2>
-  </div>
-
-  <div class="text-block__text">Vision House International s.r.o. <br>  
-Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї</div>
-
-  <div class="text-block__text">
-    <div><strong><a href="tel:+15515531215">+1 551-553-1215</a></strong></div>
-    <div><strong><a href="mailto:info@cimmaintenance.com">info@cimmaintenance.com</a></strong></div>
-  </div>
-
-  <div class="text-block__btn">
-    {{ mixins.btn(
-      title = 'contact us',
-      mod = 'btn--inherit',
-      combine = true
-    ) }}
-  </div>
-</div>
-<!-- end text-block -->
+  {{ mixins.textBlock(
+    mod = 's-contacts__content',
+    blockLabel = { label: 'Contacts', mod: 'text-label--inherit' },
+    title = { title: '<small>Contact</small>
+Vision House' },
+    text = [
+      { text: 'Vision House International s.r.o. <br>  
+Mickiewiczova 16, 811 07 Bratislava/Stare Mesto, Slovakiaї' },
+      { text: '<div><strong><a href="tel:+15515531215">+1 551-553-1215</a></strong></div>
+    <div><strong><a href="mailto:info@cimmaintenance.com">info@cimmaintenance.com</a></strong></div>' }
+    ],
+    button = {
+      title: 'contact us',
+      mod: 'btn--inherit'
+    }
+  ) }}
 {% endblock %}
 
 {% block right %}

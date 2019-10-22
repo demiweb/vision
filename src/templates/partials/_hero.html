@@ -24,17 +24,17 @@
     <!-- begin hero-block -->
     <div class="hero-block">
       {% if hero.title %}
-        <div class="hero-block__title">
+        <div class="hero-block__title js-anim-el" data-anim-name="fadeInUp">
           <h1 class="title title--h1">{{ hero.title | safe }}</h1>
         </div>
       {% endif %}
 
       {% if hero.subttl %}
-      <div class="hero-block__subttl">{{ hero.subttl | safe }}</div>
+      <div class="hero-block__subttl js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">{{ hero.subttl | safe }}</div>
       {% endif %}
 
       {% if hero.scroll %}
-      <div class="hero-block__scroll">
+      <div class="hero-block__scroll js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">
         <!-- begin scroll-down -->
         <button class="scroll-down js-scroll-down">
           <span class="scroll-down__title">discover more</span>

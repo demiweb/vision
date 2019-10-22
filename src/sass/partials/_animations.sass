@@ -1,11 +1,47 @@
 .fadeIn
   animation-name: fadeIn
 
+.fadeInUp
+  animation-name: fadeInUp
+  animation-timing-function: cubic-bezier(.165,.84,.44,1)
+
+.fadeInRightLg
+  animation-name: fadeInRightLg
+  animation-timing-function: cubic-bezier(.165,.84,.44,1)
+
+.fadeInLeftLg
+    animation-name: fadeInLeftLg
+    animation-timing-function: cubic-bezier(.165,.84,.44,1)
+
 @keyframes fadeIn
   0%
     opacity: 0
   100%
     opacity: 1
+
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translate(0, 30px)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes fadeInRightLg
+  0%
+    opacity: 0
+    transform: translate(100%, 0)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes fadeInLeftLg
+  0%
+    opacity: 0
+    transform: translate(-100%, 0)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
 
 @keyframes scrollDown
   0%

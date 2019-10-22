@@ -7,41 +7,24 @@
       <div class="project__left">
         <div class="container">
           <div class="project__content">
-            <!-- begin text-block -->
-            <div class="text-block">
-              {% if i.label %}
-              <div class="text-block__label">
-                {{ mixins.label(i.label) }}
-              </div>
-              {% endif %}
-              
-              {% if i.title %}
-              <div class="text-block__title">
-                <h2 class="title title--h2">{{ i.title | safe }}</h2>
-              </div>
-              {% endif %}
+            {{ mixins.textBlock(
+              blockLabel = i.label,
+              title = { title: i.title },
+              text = [
+                { text: i.text }
+              ],
+              button = {
+                title: i.btn.title,
+                mod: i.btn.mod
+              }
+            ) }}
 
-              {% if i.text %}
-              <div class="text-block__text">{{ i.text | safe }}</div>
-              {% endif %}
-
-              {% if i.btn %}
-              <div class="text-block__btn">
-                {{ mixins.btn(
-                  title = i.btn.title,
-                  mod = i.btn.mod,
-                  combine = true
-                ) }}
-              </div>
-              {% endif %}
-            </div>
-            <!-- end text-block -->
           </div>
         </div>
       </div>
 
       <div class="project__right">
-        <div class="project__img js-lazy" data-background-image="./img/{{ i.img }}"></div>
+        <div class="project__img no-animation js-anim-el js-lazy" data-anim-name="{% if i.mod === 'project--reverse' %}fadeInRightLg{% else %}fadeInLeftLg{% endif %}" data-background-image="./img/{{ i.img }}"></div>
       </div>
     </div>
     <!-- end project -->
