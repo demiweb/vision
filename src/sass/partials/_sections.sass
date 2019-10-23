@@ -38,21 +38,23 @@
       margin-right: -15px
   &__right
     width: 50%
-    overflow: hidden
+    // overflow: hidden
     +md
       width: auto
       margin-left: -15px
       margin-right: -15px
-  &__img
+  &__img-wrap
     height: 100%
     margin-right: -75px
     margin-top: 90px
-    +cover
+    overflow: hidden
     +xl
       margin-top: 45px
       margin-right: 0
+  &__img
+    height: 100%   
+    +cover    
     +md
-      margin-top: 0
       padding-top: 50%
     +xs
       padding-top: 70%

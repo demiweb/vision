@@ -25,7 +25,7 @@ class Stagger {
   }
 
   _addObserver() {
-    this.observer = new IntersectionObserver(this.animate.bind(this));
+    this.observer = new IntersectionObserver(this.animate.bind(this), { threshold: 0.2 });
     this.observer.observe(this.wrap);
   }
 

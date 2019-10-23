@@ -25,7 +25,7 @@ Palace in Ust-Kamenogorsk'
 %}
 
 <!-- begin section -->
-<section class="section pt-lg pb-xl">
+<section class="section{% if sectionWorks.mod %} {{ sectionWorks.mod }}{% else %} pt-lg pb-xl{% endif %}">
   <div class="container">
     <div class="section__title-block">
       {{ mixins.textBlock(
