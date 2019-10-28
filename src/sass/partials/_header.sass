@@ -29,7 +29,18 @@
       transition-delay: .5s
       +before
         transition-delay: .5s
-    +hover
+    body:not(.has-open-menu) &
+      +hover
+        
+          height: 100%
+          .header-btn
+            justify-content: flex-end
+            padding-bottom: 160px
+            +md
+              padding-bottom: 100px
+            &__title
+              font-size: inherit
+    .has-open-menu &
       height: 100%
       .header-btn
         justify-content: flex-end
@@ -37,8 +48,7 @@
         +md
           padding-bottom: 100px
         &__title
-          font-size: inherit      
-
+          font-size: inherit
 
   &__burger
     height: $header-width
