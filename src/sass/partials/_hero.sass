@@ -9,7 +9,7 @@
   +flex(space-between, normal, column)
   +md
     height: calc(100vh - #{$header-height-md})
-    height: calc((var(--vh, 1vh) * 100) - #{$header-height-md})
+    height: calc((var(--vh, 1vh) * 100) - #{$header-height-md})  
   &__bg
     +cover
     position: absolute
@@ -18,6 +18,11 @@
     left: 0
     right: 0
     bottom: $padding-bottom
+    +before
+      +coverdiv
+      z-index: 0
+      background-color: rgba(0,0,0,0.6)
+      background: linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%)
   &__top
     width: 100%
     padding-left: calc(#{$header-width} + 15px)
