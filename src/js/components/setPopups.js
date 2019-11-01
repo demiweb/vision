@@ -1,4 +1,5 @@
-import Popup from '../lib/popup';
+// import Popup from '../lib/popup';
+import Popup from 'popup-simple';
 import { IS_ACTIVE } from '../constants';
 
 const SHOW_DURATION = 1000;
@@ -53,10 +54,6 @@ class MyPopup extends Popup {
 
   closeShowreel() {
     this.wrap.style.zIndex = '';
-  }
-
-  init() {
-    super.init();
   }
 }
 

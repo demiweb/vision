@@ -1,15 +1,12 @@
-import Animator from '../lib/scrollAnimator';
+import Anim from 'js-anim';
 
 export default function animateOnScroll() {
-  const els = [...document.querySelectorAll('.js-anim-el')];
-  if (!els.length) return;
+  const els = document.querySelectorAll('.js-anim-el');
 
-  els.forEach((el) => {
-    const animator = new Animator(el, {
-      observer: {
-        threshold: 0.2,
-      },
-    });
-    animator.init();
+  const anim = new Anim(els, {
+    observer: {
+      threshold: 0.2,
+    },
   });
+  anim.observe();
 }

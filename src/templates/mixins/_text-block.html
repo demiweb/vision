@@ -14,19 +14,19 @@
   {% endif %}
 
   {% if title %}
-  <div class="text-block__title js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.2s">
+  <div class="text-block__title js-anim-el" data-anim-name="fadeInUp" data-anim-delay="200">
     <h2 class="title title--h2{% if title.mod %} {{ title.mod }}{% endif %}">{{ title.title | safe }}</h2>
   </div>
   {% endif %}
 
   {% if text %}
     {% for i in text %}
-    <div class="text-block__text{% if i.mod %} {{ i.mod }}{% endif %} js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.4s">{{ i.text | safe }}</div>
+    <div class="text-block__text{% if i.mod %} {{ i.mod }}{% endif %} js-anim-el" data-anim-name="fadeInUp" data-anim-delay="400">{{ i.text | safe }}</div>
     {% endfor %}
   {% endif %}
 
   {% if button.title %}
-  <div class="text-block__btn js-anim-el" data-anim-name="fadeInUp" data-anim-delay="0.6s">
+  <div class="text-block__btn js-anim-el" data-anim-name="fadeInUp" data-anim-delay="600">
     {{ btn(
       title = button.title,
       mod = button.mod,
